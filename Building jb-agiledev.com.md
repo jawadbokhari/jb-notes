@@ -24,8 +24,9 @@ Lovable is a powerful tool for turning prompts into functional web apps.
 *   **The Credit Hack:** Lovable offers 5 free credits per day. I was able to generate a high-quality initial version of the site in just about 3 credits.
 *   **Fine-Tuning:** I spent a few minutes tweaking the layout directly in Lovable until it felt just right.
 
-### 5. Version Control & Automated Hosting (Git + Vercel)
-Once the design was ready, Lovable allowed me to link the project to a GitHub repository.
+### 5. Version Control: Ownership via the "Source of Truth" (Git + Vercel)
+Once the design was ready, Lovable linked the project to a GitHub repository. This is a critical step: **A git repo is the ultimate source of truth.** By owning the code on GitHub, you retain full power—you can switch tools, play with different AI agents, or move to any hosting provider. You aren't locked into a single platform; the code remains your own to play with.
+
 *   **Hosting:** I used [Vercel](https://vercel.com/) for deployment. Vercel’s free tier is generous and automatically deploys any changes I push to Git. It’s the gold standard for hobbyists and developers looking for high-performance hosting at no cost.
 
 ### 6. The "LLM Consultant" Strategy
