@@ -1,3 +1,8 @@
+---
+title: Sub-Agents
+parent: AI Fundamentals
+---
+
 # Sub-Agents
 Agents defined in `.cursor/agents` or `.claude/agents` are sub-agents that run like a forked child process with their own isolated execution context.
 

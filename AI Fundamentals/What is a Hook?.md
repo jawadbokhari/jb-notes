@@ -1,3 +1,8 @@
+---
+title: What is a Hook?
+parent: AI Fundamentals
+---
+
 # Hooks
 Hooks are user-defined shell commands that execute at specific points in Claude Code’s lifecycle. They are configured in `settings.json` — not in memory or preferences — because hooks are executed by the Claude Code harness itself, not by the AI.
 

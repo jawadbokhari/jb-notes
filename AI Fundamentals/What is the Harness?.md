@@ -1,3 +1,8 @@
+---
+title: What is the Harness?
+parent: AI Fundamentals
+---
+
 # What is the Harness?
 
 The **harness** is the outer shell — the Claude Code CLI application running on your machine. It has no intelligence of its own. It is deterministic software (if/then logic, event listeners, process management) that **manages, controls, and enables** the AI agent.

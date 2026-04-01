@@ -1,3 +1,8 @@
+---
+title: Plugins  Marketplaces
+parent: AI Fundamentals
+---
+
 # Plugins
 A Plugin is a Claude concept to package skills, agents, MCP servers, and hooks and distribute via marketplace. 
 Plugins are versioned and distributes via marketplaces. 

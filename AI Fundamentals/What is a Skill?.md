@@ -1,3 +1,8 @@
+---
+title: What is a Skill?
+parent: AI Fundamentals
+---
+
 ## What is a Skill?
 A skill as a **self-contained capability bundle** — everything an agent needs to perform a specific function, packaged together.
 At the simplest level a Skill is something you enable your AI agent to do some work. 

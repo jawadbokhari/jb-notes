@@ -1,3 +1,8 @@
+---
+title: Skills vs Agents
+parent: AI Fundamentals
+---
+
 # Skills vs Agents
 | **Feature** | **Skill (`SKILL.md`)**                                         | **Agent / Subagent (`.md`)**                                 |
 | ----------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
