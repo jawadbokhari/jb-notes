@@ -43,3 +43,18 @@ avatar: ""
 
 # Theme mode: light | dark | auto
 theme_mode: auto
+
+# Jekyll defaults — theme gem does NOT auto-apply these
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      toc: true
+      comments: false
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
