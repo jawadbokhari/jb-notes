@@ -1,6 +1,7 @@
 title: JB's Notes
 remote_theme: just-the-docs/just-the-docs
 color_scheme: light
+baseurl: /jb-notes
 
 aux_links:
   "GitHub": "https://github.com/jawadbokhari/jb-notes"

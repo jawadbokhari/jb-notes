@@ -59,7 +59,7 @@ Download as an archive and keep it in your user or project for use.
 
 ### Organizational 
 - Create Skill git repositories.  Collaborators can review and improve skills. 
-Distribute via [Plugins & Marketplaces](/ai-fundamentals/plugins-and-marketplaces/). Company-wide git repositories can definitely be published as an internal marketplace.
+Distribute via [Plugins & Marketplaces](/jb-notes/ai-fundamentals/plugins-and-marketplaces/). Company-wide git repositories can definitely be published as an internal marketplace.
 
 ### Your Skills 
 You can create your skill repository and share with the world.
