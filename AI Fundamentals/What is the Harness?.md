@@ -1,6 +1,7 @@
 ---
 title: What is the Harness?
 parent: AI Fundamentals
+permalink: /ai-fundamentals/what-is-the-harness/
 ---
 
 # What is the Harness?

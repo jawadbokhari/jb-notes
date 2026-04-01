@@ -1,13 +1,12 @@
 ---
 title: What is an AI Agent?
 parent: AI Fundamentals
+permalink: /ai-fundamentals/what-is-an-ai-agent/
 ---
 
 AI Agent
 A system built around an LLM. 
 A system that perceives its environment, make decisions, and take actions to achieve a goals. An agent has the brain (usually but not always an LLM - fuzzy logic, ML models, rule-based systems)
-
-[[LLMs-vs-Agents.excalidraw]]
 
 Agents mimic human decision-making. They are built with 4 core modules. 
 1. Brain ("Model") - the LLM that handles reasoning, planning, and natural language understanding.

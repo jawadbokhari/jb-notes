@@ -1,6 +1,7 @@
 ---
-title: Plugins  Marketplaces
+title: "Plugins & Marketplaces"
 parent: AI Fundamentals
+permalink: /ai-fundamentals/plugins-and-marketplaces/
 ---
 
 # Plugins

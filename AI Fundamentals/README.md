@@ -2,19 +2,20 @@
 title: AI Fundamentals
 nav_order: 2
 has_children: true
+permalink: /ai-fundamentals/
 ---
 
 You've been granted the superpower to have any army of agents at your service. You can create agents each with its own set of skills and team them up to collaborate for a mission. The team or team of teams would be at your service but do you really know what do you want to do? 
 You kind of have the power to do anything on the earth. 
 
-- [[#LLM]]
-- [[What is an AI Agent?]]
-- [[What is a Skill?]]
-- [[Skills vs Agents]]
-- [[What is a Hook?]]
-- [[Plugins & Marketplaces]]
-- [[Sub-Agents]]
-- [[What is the Harness?]]
+- [LLM](#llm)
+- [What is an AI Agent?](/ai-fundamentals/what-is-an-ai-agent/)
+- [What is a Skill?](/ai-fundamentals/what-is-a-skill/)
+- [Skills vs Agents](/ai-fundamentals/skills-vs-agents/)
+- [What is a Hook?](/ai-fundamentals/what-is-a-hook/)
+- [Plugins & Marketplaces](/ai-fundamentals/plugins-and-marketplaces/)
+- [Sub-Agents](/ai-fundamentals/sub-agents/)
+- [What is the Harness?](/ai-fundamentals/what-is-the-harness/)
 
 
 ## LLM
