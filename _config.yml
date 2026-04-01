@@ -1,7 +1,44 @@
 title: JB's Notes
-remote_theme: just-the-docs/just-the-docs
-color_scheme: light
-baseurl: /jb-notes
+tagline: Personal notes on AI, tech, and development
+description: >-
+  Personal notes and writings by Jawad Bokhari on AI, technology, and development.
 
-aux_links:
-  "GitHub": "https://github.com/jawadbokhari/jb-notes"
+url: "https://jawadbokhari.github.io"
+baseurl: "/jb-notes"
+
+author:
+  name: Jawad Bokhari
+
+timezone: America/New_York
+
+lang: en
+
+theme: jekyll-theme-chirpy
+
+# Table of Contents
+toc: true
+
+# Pagination
+paginate: 10
+
+# Social links
+github:
+  username: jawadbokhari
+
+# Comments - disabled
+comments:
+  active: false
+
+# Analytics - disabled
+analytics:
+  google:
+    id: ""
+
+# Self-hosted fonts
+webfonts: true
+
+# Sidebar avatar (place image at /assets/img/avatar.jpg to use)
+avatar: ""
+
+# Theme mode: light | dark | auto
+theme_mode: auto
