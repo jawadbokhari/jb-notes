@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Building jb-agiledev.com
 nav_order: 3
 permalink: /building-jb-agiledev/

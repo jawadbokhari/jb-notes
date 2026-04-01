@@ -1,4 +1,5 @@
 ---
+layout: page
 title: What is an AI Agent?
 parent: AI Fundamentals
 permalink: /ai-fundamentals/what-is-an-ai-agent/

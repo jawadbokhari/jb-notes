@@ -1,4 +1,5 @@
 ---
+layout: page
 title: What is the Harness?
 parent: AI Fundamentals
 permalink: /ai-fundamentals/what-is-the-harness/

@@ -1,4 +1,5 @@
 ---
+layout: page
 title: AI Fundamentals
 nav_order: 2
 has_children: true

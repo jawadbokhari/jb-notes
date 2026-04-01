@@ -1,4 +1,5 @@
 ---
+layout: page
 title: What is a Skill?
 parent: AI Fundamentals
 permalink: /ai-fundamentals/what-is-a-skill/

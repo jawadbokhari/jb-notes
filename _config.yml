@@ -20,6 +20,7 @@ toc: true
 
 # Pagination
 paginate: 10
+paginate_path: /page:num/
 
 # Social links
 github:

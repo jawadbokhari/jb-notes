@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Plugins & Marketplaces"
 parent: AI Fundamentals
 permalink: /ai-fundamentals/plugins-and-marketplaces/

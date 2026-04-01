@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Sub-Agents
 parent: AI Fundamentals
 permalink: /ai-fundamentals/sub-agents/
