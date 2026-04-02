@@ -1,8 +1,5 @@
 ---
-layout: page
 title: What is a Skill?
-parent: AI Fundamentals
-permalink: /ai-fundamentals/what-is-a-skill/
 ---
 
 ## What is a Skill?
@@ -81,4 +78,3 @@ You can create your skill repository and share with the world.
 
 
 > Use **OpenSkills** CLI to install Anthropic skills to other AI agents such as Cursor, Co-pilot, etc.
-

@@ -1,5 +1,5 @@
 scratch-space/
-_site/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
+.quartz-build/
+public/
+node_modules/
+.playwright-mcp/

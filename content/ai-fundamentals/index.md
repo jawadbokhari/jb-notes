@@ -1,9 +1,5 @@
 ---
-layout: page
 title: AI Fundamentals
-nav_order: 2
-has_children: true
-permalink: /ai-fundamentals/
 ---
 
 You've been granted the superpower to have any army of agents at your service. You can create agents each with its own set of skills and team them up to collaborate for a mission. The team or team of teams would be at your service but do you really know what do you want to do? 

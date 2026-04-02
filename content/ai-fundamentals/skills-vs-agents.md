@@ -1,8 +1,5 @@
 ---
-layout: page
 title: Skills vs Agents
-parent: AI Fundamentals
-permalink: /ai-fundamentals/skills-vs-agents/
 ---
 
 # Skills vs Agents

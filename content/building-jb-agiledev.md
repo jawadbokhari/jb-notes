@@ -1,8 +1,5 @@
 ---
-layout: page
 title: Building jb-agiledev.com
-nav_order: 3
-permalink: /building-jb-agiledev/
 ---
 
 # The $0 Modern Tech Stack: How I Built My Website Using Only AI and Free Tiers

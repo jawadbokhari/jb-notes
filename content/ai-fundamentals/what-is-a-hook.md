@@ -1,8 +1,5 @@
 ---
-layout: page
 title: What is a Hook?
-parent: AI Fundamentals
-permalink: /ai-fundamentals/what-is-a-hook/
 ---
 
 # Hooks
