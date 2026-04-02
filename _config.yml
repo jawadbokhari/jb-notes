@@ -15,6 +15,11 @@ lang: en
 
 theme: jekyll-theme-chirpy
 
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
 # Table of Contents
 toc: true
 
@@ -56,5 +61,10 @@ defaults:
   - scope:
       path: ""
       type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: tabs
     values:
       layout: page
