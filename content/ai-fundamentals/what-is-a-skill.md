@@ -57,7 +57,7 @@ Download as an archive and keep it in your user or project for use.
 
 ### Organizational 
 - Create Skill git repositories.  Collaborators can review and improve skills. 
-Distribute via [Plugins & Marketplaces](/jb-notes/ai-fundamentals/plugins-and-marketplaces/). Company-wide git repositories can definitely be published as an internal marketplace.
+Distribute via [[plugins-and-marketplaces|Plugins & Marketplaces]]. Company-wide git repositories can definitely be published as an internal marketplace.
 
 ### Your Skills 
 You can create your skill repository and share with the world.
@@ -78,3 +78,8 @@ You can create your skill repository and share with the world.
 
 
 > Use **OpenSkills** CLI to install Anthropic skills to other AI agents such as Cursor, Co-pilot, etc.
+
+
+## Skill Types
+- Capability Uplift - extra know-how or abilities that the base AI models does not inherently possess or perform well. bolt-on new technical capabilities, will get obsolete with improved model capabilities
+- Preference skills - standardize how the agent behaves. Preferences, such as we give to the model for expected output format, communication style, etc for consistency, standardized business process such as code-review,  need consistency evals that measure adherence to patterns, style compliance

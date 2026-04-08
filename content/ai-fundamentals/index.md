@@ -6,13 +6,13 @@ You've been granted the superpower to have any army of agents at your service. Y
 You kind of have the power to do anything on the earth. 
 
 - [LLM](#llm)
-- [What is an AI Agent?](/jb-notes/ai-fundamentals/what-is-an-ai-agent/)
-- [What is a Skill?](/jb-notes/ai-fundamentals/what-is-a-skill/)
-- [Skills vs Agents](/jb-notes/ai-fundamentals/skills-vs-agents/)
-- [What is a Hook?](/jb-notes/ai-fundamentals/what-is-a-hook/)
-- [Plugins & Marketplaces](/jb-notes/ai-fundamentals/plugins-and-marketplaces/)
-- [Sub-Agents](/jb-notes/ai-fundamentals/sub-agents/)
-- [What is the Harness?](/jb-notes/ai-fundamentals/what-is-the-harness/)
+- [[what-is-an-ai-agent|What is an AI Agent?]]
+- [[what-is-a-skill|What is a Skill?]]
+- [[skills-vs-agents|Skills vs Agents]]
+- [[what-is-a-hook|What is a Hook?]]
+- [[plugins-and-marketplaces|Plugins & Marketplaces]]
+- [[sub-agents|Sub-Agents]]
+- [[what-is-the-harness|What is the Harness?]]
 
 
 ## LLM
