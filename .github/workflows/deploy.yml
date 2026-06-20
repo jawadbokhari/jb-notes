@@ -26,7 +26,7 @@ jobs:
       - name: Clone Quartz
         run: |
           git clone https://github.com/jackyzha0/quartz.git .quartz-build
-          cd .quartz-build && git checkout 512d48d7193b365a54a9159e02b750e4c291d8f2
+          cd .quartz-build && git checkout ec00a40aefca73596ab76e3ebe3a8e1129b43688
 
       - name: Copy content and config
         run: |
