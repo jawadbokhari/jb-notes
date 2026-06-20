@@ -24,7 +24,9 @@ jobs:
           fetch-depth: 0
 
       - name: Clone Quartz
-        run: git clone --depth 1 https://github.com/jackyzha0/quartz.git .quartz-build
+        run: |
+          git clone https://github.com/jackyzha0/quartz.git .quartz-build
+          cd .quartz-build && git checkout 512d48d7193b365a54a9159e02b750e4c291d8f2
 
       - name: Copy content and config
         run: |
