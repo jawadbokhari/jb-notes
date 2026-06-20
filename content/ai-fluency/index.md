@@ -25,8 +25,8 @@ The framework organizes AI collaboration into four competencies:
 
 - **[[Delegation]]** — Thoughtfully decide what to do yourself, what to collaborate on, and what to fully hand off
 - **[[Description]]** — Communicate in ways that build shared understanding, not just issue commands
-- **Discernment** — Evaluate AI outputs critically rather than accepting them at face value
-- **Diligence** — Take responsibility for the work you do with AI
+- **[[Discernment]]** — Evaluate AI outputs critically rather than accepting them at face value
+- **[[Diligence]]** — Take responsibility for the work you do with AI
 
 > [!tip] The key insight
 > The goal isn't to automate everything. It's to create the most effective human-AI partnership for any given task.

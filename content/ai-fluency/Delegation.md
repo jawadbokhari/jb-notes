@@ -35,3 +35,7 @@ For each part of the work:
 Which [[AI system]] should be used for this project? 
 For orchestration and each part of the problem? 
 
+---
+
+*Prev: [[index|AI Fluency]] · Next: [[Description]]*
+
