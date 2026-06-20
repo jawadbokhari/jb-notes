@@ -1,0 +1,1 @@
+The best way to systematically turn these into allowlist rules is the /fewer-permission-prompts skill — it scans your recent transcripts and generates the exact allowlist entries for your .claude/settings.json.
