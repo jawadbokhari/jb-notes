@@ -45,8 +45,11 @@ Called `memory files` in Claude Code, `memories` in ChatGPT, `grounding context`
 Examples of what belongs here:
 - "User is a data scientist"
 - "Daily note system uses this specific format"
-- "User prefers the CLI approach over MCP"
+- "User has been observed favoring the CLI approach over MCP" (an *inferred* preference, not a standing rule)
 - "The main project is in a growth phase"
+
+> [!note] Preferences can belong to either category
+> The dividing line isn't the topic ("tool preference") but the *source*: an explicit standing rule you want followed every time ("always use CLI, never MCP") is a System Instruction. A preference the AI noticed or was told about the user, without it being phrased as a rule, is Memory. The same fact can start as Memory and graduate to a System Instruction once it's confirmed enough to be treated as a rule.
 
 The AI recalls these to make better judgments, tailoring responses to who you are and what you're doing.
 
@@ -65,7 +68,7 @@ The AI recalls these to make better judgments, tailoring responses to who you ar
 
 ## Context Window Impact
 
-Neither system instructions nor memory are loaded per message — both are loaded **once at conversation start** and stay resident for the entire session.
+System instructions are loaded **once at conversation start** and stay fixed for the entire session. Memory is loaded at start too, but not necessarily all of it: a lightweight index is always resident, and in "smart" systems (see below) additional full memory files can be pulled in mid-conversation as they become relevant — so memory's footprint can grow slightly during a session, unlike system instructions.
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -80,9 +83,9 @@ Neither system instructions nor memory are loaded per message — both are loade
 
 | | System Instructions | Memory |
 |---|---|---|
-| When loaded | Conversation start | Conversation start (selectively in smart systems) |
-| Grows during conversation? | No | No |
-| **What actually grows** | **Conversation history — every exchange adds tokens** |
+| When loaded | Conversation start | Index at start; full files pulled in on demand (smart systems) |
+| Grows during conversation? | No | Slightly — only if additional memory files get pulled in |
+| **What actually grows the most** | **Conversation history — every exchange adds tokens** |
 
 **Smart vs dumb memory systems:**
 - *Dumb* (early ChatGPT): dumps all memories into system prompt upfront — fixed cost regardless of relevance
@@ -171,5 +174,5 @@ Memory relevant to a specific workspace can also live within that workspace (e.g
 | Concept | Claude Code | ChatGPT | Gemini |
 |---|---|---|---|
 | System instructions | `CLAUDE.md` | Custom Instructions | System Instructions |
-| Persistent memory | `.claude/memory/` files | Memories | Gems (partial) |
-| Scope | Per-project or global | Account-wide | Per-gem |
+| Persistent memory | `.claude/memory/` files | Memories | Saved Info (personalization) |
+| Scope | Per-project or global | Account-wide | Account-wide (not available inside Gems or Live) |
