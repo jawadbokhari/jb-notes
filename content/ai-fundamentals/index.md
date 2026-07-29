@@ -13,6 +13,7 @@ You kind of have the power to do anything on the earth.
 - [[plugins-and-marketplaces|Plugins & Marketplaces]]
 - [[sub-agents|Sub-Agents]]
 - [[what-is-the-harness|What is the Harness?]]
+- [[bmad-best-practices|BMad Best Practices]]
 
 
 ## LLM
