@@ -10,3 +10,4 @@ Personal notes on AI, technology, and development by Jawad Bokhari.
 - [[ai-fundamentals/index|AI Fundamentals]] — Agents, skills, hooks, sub-agents, and the harness
 - [[building-jb-agiledev|Building jb-agiledev.com]] — Notes on building the JB Agile Dev website
 - [[voice-input-for-claude-code|A Better Way to Talk to Claude Code (Mac Only)]] — Ditching Claude Code's native voice input for a free, local dictation app
+- [[wysiwyg-markdown-editing-in-vscode|A Readable, Editable Markdown View in VS Code]] — Repurposing the Draw.io extension's markdown editor as a default WYSIWYG view
