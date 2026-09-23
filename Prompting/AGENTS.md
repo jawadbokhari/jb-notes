@@ -25,3 +25,4 @@ Workflow: read source → extract into `sources/` → distill into `techniques/`
 
 ## Sources logged so far
 - *Mastering Claude AI* (Ryan Dickey, Apress) — epub in `~/Downloads/01_Learning & Development/`. Extracted: Ch.4 "The Art of Prompting", Ch.10 "Advanced Prompting Strategies", Appendix A (Quick Reference), Appendix C (Templates & Frameworks). See `sources/mastering-claude-ai.md`.
+- Dust Blog, "How to Write AI Agent Instructions That Actually Work" + Claude Code Agent Tutorial, "How to Build an AI Agent with Claude Code" — downloaded notes in `~/Downloads/ai-agent-manuals-note.md` and `ai-agent-manuals-note-v2.md` (2026-09-23), merged into one source note. Covers persistent system-instruction design (not one-off prompting): three-layer mental model, six-part instruction anatomy, three-tier guardrail framework. See `sources/ai-agent-system-instructions.md` and `templates/system-instructions.md`.

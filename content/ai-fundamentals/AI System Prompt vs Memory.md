@@ -163,6 +163,25 @@ Claude Code automatically compacts long conversations when context gets large �
 
 ---
 
+## Global vs Project Scope
+
+Both halves of the distinction above (rules vs. memory) repeat at two different scopes: **global** (applies to every project, tied to you as the user) and **project** (applies to one repo/workspace, tied to that codebase). Four boxes, not two:
+
+| | Rules (system instructions) | Memory (learned context) |
+|---|---|---|
+| **Global** | `~/.claude/CLAUDE.md` — standing orders that apply everywhere, e.g. "never use em dashes," "always route ExpertFlow Workspace actions through the `gworkspace` MCP, not `gws`" | `~/.ai/memory/` (Claude Code) — facts about you, cross-project feedback, reference pointers, not tied to one repo |
+| **Project** | `<repo>/AGENTS.md` (canonical, tool-neutral) with `<repo>/CLAUDE.md` as a thin pointer to it — rules specific to that codebase, e.g. "diagrams follow the house style in X," "never name a cloud vendor in deliverables" | `<repo>/.ai/memory/` — facts specific to that project: open questions, decisions made, who asked for what and why |
+
+**Why AGENTS.md and not just CLAUDE.md at the project level:** a project's rules should work for any AI coding tool (Claude Code, Codex, Gemini CLI, etc.), so the canonical copy lives in the tool-neutral `AGENTS.md`. `CLAUDE.md` in that repo is deliberately kept thin (an `@AGENTS.md` pointer plus genuinely Claude-only additions like skill names) so there is exactly one place to edit, never two files drifting apart.
+
+**How to tell which of the four boxes something belongs in:**
+- Ask *"does this apply everywhere, or only in this repo?"* first (global vs. project).
+- Then ask *"is this an imperative standing order, or a fact/observation?"* (rule vs. memory) — same test as above, applied at whichever scope you landed on.
+- A rule that starts project-specific can widen to global once you notice it recurring across repos (e.g. a formatting convention you keep restating in every project's AGENTS.md is a sign it belongs in global CLAUDE.md instead).
+- A global memory should never hold project-specific facts (they'll rot and won't be visible to someone reading only that project) — those belong in that project's own `.ai/memory/`, per the rule already in global CLAUDE.md's "Project-Level Memory" section.
+
+---
+
 ## Vault-Level Memory
 
 Memory relevant to a specific workspace can also live within that workspace (e.g. in an Obsidian vault) so it is searchable and linkable — not just hidden in the AI tool's internal storage.
