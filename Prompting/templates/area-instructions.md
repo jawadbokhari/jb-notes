@@ -73,4 +73,5 @@ Edit AGENTS.md, not this file.
 - **Sub-areas:** add a nested `AGENTS.md` only where rules truly differ. The nearest file wins; do not repeat parent rules.
 - **Hard limits:** prose is context, not enforcement. Back up each "never" with a permission rule or hook where the tool supports it.
 - **Other tools:** Gemini CLI can be configured to read `AGENTS.md` (`context.fileName` in settings); Cursor reads `AGENTS.md` or `.cursor/rules/*.mdc`.
+- **Code repo variant:** for a product repo, add "Verifying your work" (exact build, test, lint and eval commands, with evidence required), "Working from a plan" (follow the approved plan, record deviations), and "Protected paths" (also enforced by a hook). My AI-Native SDLC templates (private vault, `JB/Frameworks/AI-Native-SDLC/`) contain this variant.
 - **Obsidian vault variant:** `System/Templates/AI Guideline Template.md` is a Templater version of this template for per-scope guideline notes inside the vault.
