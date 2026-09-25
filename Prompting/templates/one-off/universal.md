@@ -2,7 +2,7 @@
 title: "Templates: Universal"
 ---
 
-Source: [[../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
+Source: [[../../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
 
 ## Master Prompt Template
 Use as the default skeleton for any non-trivial request.

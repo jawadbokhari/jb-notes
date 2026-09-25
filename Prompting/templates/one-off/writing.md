@@ -2,7 +2,7 @@
 title: "Templates: Writing"
 ---
 
-Source: [[../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
+Source: [[../../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
 
 ## Blog Post Blueprint
 

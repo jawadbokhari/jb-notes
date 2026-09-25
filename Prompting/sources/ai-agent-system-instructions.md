@@ -47,4 +47,4 @@ Distilled from `ai-agent-manuals-note.md` and `ai-agent-manuals-note-v2.md`, dow
 
 See [[agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files]] for how the two operational rules above work in practice (stop and ask, plan first) and for the four-pillar Workflow File.
 
-See [[../templates/system-instructions|System Instructions Template]] for the copy-paste skeleton built from this framework, and the Gemini user-level template filed there for a worked example of the Identity/Decision/Execution layers applied to a real personal setup.
+See [[../guidelines/system-prompt-guidelines|System Prompt Guidelines]] for how this framework was updated with current vendor guidance, and the [[../templates/user-system-prompt|User System Prompt]] and [[../templates/agent-contract|Agent Contract]] templates built from it.

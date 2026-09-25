@@ -49,4 +49,4 @@ A Workflow File is a plain Markdown document acting as the standard operating pr
 ## Related notes
 
 - [[ai-agent-system-instructions|AI Agent System Instructions]]: the six-part anatomy, where these two standing rules appear as part 3.
-- [[../templates/system-instructions|System Instructions templates]]: includes a Workflow File skeleton built from the four pillars.
+- [[../templates/task-workflow|Task Workflow template]]: the Workflow File skeleton built from the four pillars, updated with trigger-based asking and a definition of done.

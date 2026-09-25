@@ -10,7 +10,7 @@ Chapters/sections extracted:
 - Appendix A — Quick Reference Guide
 - Appendix C — Templates and Frameworks
 
-See distilled notes in [[../techniques/foundational|Foundational Techniques]] and [[../techniques/advanced|Advanced Techniques]], and copy-paste-ready prompts in `../templates/`.
+See distilled notes in [[../techniques/foundational|Foundational Techniques]] and [[../techniques/advanced|Advanced Techniques]], and copy-paste-ready prompts in `../templates/one-off/`.
 
 ## Ch.4 — The Art of Prompting (core ideas)
 
@@ -85,14 +85,14 @@ Framing: these are *not* magic — they enhance systematic pattern-recognition u
 
 ## Appendix C — Templates and Frameworks
 
-Full reusable templates ported into `../templates/` as standalone files:
-- `templates/universal.md` — Master Prompt Template, Problem-Solving Framework
-- `templates/business.md` — Executive Summary Generator, SWOT Analysis, Meeting Agenda Optimizer
-- `templates/writing.md` — Blog Post Blueprint, Email Enhancement Framework
-- `templates/learning.md` — Concept Mastery Framework, Study Guide Generator
-- `templates/creative.md` — Story Development Framework, Brainstorming Explosion
-- `templates/research.md` — Source Analysis Framework (CRAAP test), Research Synthesis Matrix
-- `templates/data-and-productivity.md` — Quick Data Story, Morning Briefing, Weekly Review
+Full reusable templates ported into `../templates/one-off/` as standalone files:
+- `templates/one-off/universal.md` — Master Prompt Template, Problem-Solving Framework
+- `templates/one-off/business.md` — Executive Summary Generator, SWOT Analysis, Meeting Agenda Optimizer
+- `templates/one-off/writing.md` — Blog Post Blueprint, Email Enhancement Framework
+- `templates/one-off/learning.md` — Concept Mastery Framework, Study Guide Generator
+- `templates/one-off/creative.md` — Story Development Framework, Brainstorming Explosion
+- `templates/one-off/research.md` — Source Analysis Framework (CRAAP test), Research Synthesis Matrix
+- `templates/one-off/data-and-productivity.md` — Quick Data Story, Morning Briefing, Weekly Review
 
 **Meta-template** (asking Claude to build you a new template): state purpose, frequency of use, inputs you'll have, desired output format, and time constraint — ask Claude for a reusable template with clear sections, embedded instructions, and an example.
 

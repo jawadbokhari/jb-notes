@@ -2,7 +2,7 @@
 title: "Templates: Business"
 ---
 
-Source: [[../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
+Source: [[../../sources/mastering-claude-ai|Mastering Claude AI]], Appendix C.
 
 ## Executive Summary Generator
 
