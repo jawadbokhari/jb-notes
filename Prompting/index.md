@@ -16,9 +16,10 @@ Working notes for learning and practicing prompt engineering with Claude. Not pu
 - [[templates/creative|Creative]] — story development, brainstorming
 - [[templates/research|Research]] — CRAAP source analysis, research synthesis matrix
 - [[templates/data-and-productivity|Data & Productivity]] — quick data story, morning briefing, weekly review
-- [[templates/system-instructions|System Instructions]] — Gemini root/user-level template + unified CLAUDE.md/agent SOP template, for setting up persistent agent config rather than one-off prompts
+- [[templates/system-instructions|System Instructions]] — Gemini root/user-level template + unified CLAUDE.md/agent SOP template + four-pillar Workflow File skeleton, for setting up persistent agent config rather than one-off prompts
 
 ## Sources
 - [[sources/mastering-claude-ai|Mastering Claude AI (Ryan Dickey)]] — book extraction, prompting-relevant chapters
 - [[sources/anthropic-prompt-engineering-interactive-tutorial|Anthropic Prompt Engineering Interactive Tutorial (Google Sheet)]] — very first prompt engineering learning, stored in Expertflow Drive
 - [[sources/ai-agent-system-instructions|AI Agent System Instructions (Dust Blog + Claude Code Tutorial)]] — three-layer mental model, six-part anatomy, and three-tier guardrail framework for writing persistent system instructions
+- [[sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files (Claude Code Tutorial)]] — stop-and-ask and plan-first rules, and the four-pillar Workflow File (Goals, Constraints, Format, Failure)

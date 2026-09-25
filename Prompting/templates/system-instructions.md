@@ -2,7 +2,7 @@
 title: "Templates: System Instructions"
 ---
 
-Source: [[../sources/ai-agent-system-instructions|AI Agent System Instructions (Dust Blog + Claude Code Tutorial)]]; Gemini template downloaded 2026-09-23.
+Sources: [[../sources/ai-agent-system-instructions|AI Agent System Instructions (Dust Blog + Claude Code Tutorial)]] and [[../sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files]]; Gemini template downloaded 2026-09-23.
 
 These are copy-paste skeletons for *persistent* agent configuration files (`CLAUDE.md`, `AGENTS.md`, a Gemini user-level system prompt, an agent-builder system prompt), not single-turn prompts. Use them as the starting shape for setting up a new agent's standing instructions.
 
@@ -89,3 +89,36 @@ Combines the six-part anatomy in [[../sources/ai-agent-system-instructions|the s
 ```
 
 > Both templates encode the same underlying rule set (identity → process → tools → format → guardrails); the Gemini template is the root/user layer, the unified template is the per-agent/per-repo layer that inherits from it.
+
+## Workflow File (Agent SOP) Template
+
+A standard operating procedure for one repeatable task or role, built from the four pillars in [[../sources/agent-autocorrect-and-workflow-files|the auto-correction source note]]. Use it when a task recurs and a one-off prompt would have to be re-explained each time. It sits beside the task-specific template above and inherits the standing rules from the root instructions.
+
+```markdown
+# WORKFLOW: [Task or Role Name]
+
+## 1. GOALS
+- **Outcome**: [exact scenario the agent must reach]
+- **Audience**: [who the result is for]
+- **Depth**: [how detailed, e.g. one-page brief, full spec]
+
+## 2. CONSTRAINTS
+- [word or length limits]
+- [file-naming rules, e.g. lowercase with hyphens]
+- [tools the agent may and may not use]
+- [actions that need human approval before touching key files]
+
+## 3. FORMAT
+- **Deliverable**: [e.g. Markdown file saved to ./output/]
+- **Structure**: [headings, bullets, tables, named template]
+- **Tone**: [e.g. direct, concise]
+
+## 4. FAILURE
+- If required data or a source document is missing: stop and say which one, do not assume.
+- If the request is ambiguous: ask clarifying questions before starting.
+- If a tool fails or the direction proves wrong mid-run: surface the error and propose an adjusted plan, do not push on.
+
+## STANDING RULES
+- Ask at least three clarifying questions before starting any complex task.
+- Present a written plan and wait for approval before any multi-step task.
+```
