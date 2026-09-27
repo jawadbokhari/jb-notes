@@ -8,13 +8,13 @@ Sources: [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/
 
 ## 1. Pick the right artefact
 
-| You want to... | Level | Template | Lives in |
-|---|---|---|---|
-| Tell every AI how to work with *me* | User | [[../templates/user-system-prompt\|User System Prompt]] | `~/.claude/CLAUDE.md`, `~/.gemini/GEMINI.md`, ChatGPT custom instructions, Claude profile preferences |
-| Tell any agent how to behave inside one repo, folder, tool or account | Area | [[../templates/area-instructions\|Area Instructions]] | `AGENTS.md` (canonical) plus a thin `CLAUDE.md` pointer |
-| Define a new agent or sub-agent with a job, tools and limits | Agent | [[../templates/agent-contract\|Agent Contract]] | `.claude/agents/<name>.md`, an agent's own `AGENTS.md`, SDK `instructions`, a Gem or custom GPT |
-| Standardise one repeatable task an existing agent runs | Task | [[../templates/task-workflow\|Task Workflow]] | a workflow file, skill or command |
-| Get one answer, once | One-off prompt | `templates/one-off/` | the chat box |
+| You want to...                                                        | Level          | Template                                                | Lives in                                                                                              |
+| --------------------------------------------------------------------- | -------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Tell every AI how to work with *me*                                   | User           | [[../templates/user-system-prompt\|User System Prompt]] | `~/.claude/CLAUDE.md`, `~/.gemini/GEMINI.md`, ChatGPT custom instructions, Claude profile preferences |
+| Tell any agent how to behave inside one repo, folder, tool or account | Area           | [[../templates/area-instructions\|Area Instructions]]   | `AGENTS.md` (canonical) plus a thin `CLAUDE.md` pointer                                               |
+| Define a new agent or sub-agent with a job, tools and limits          | Agent          | [[../templates/agent-contract\|Agent Contract]]         | `.claude/agents/<name>.md`, an agent's own `AGENTS.md`, SDK `instructions`, a Gem or custom GPT       |
+| Standardise one repeatable task an existing agent runs                | Task           | [[../templates/task-workflow\|Task Workflow]]           | a workflow file, skill or command                                                                     |
+| Get one answer, once                                                  | One-off prompt | `templates/one-off/`                                    | the chat box                                                                                          |
 
 Rule of thumb: if you would re-explain it next session, it is an instruction, not a prompt. If it has its own tools, scope and hand-back, it is an agent contract.
 
