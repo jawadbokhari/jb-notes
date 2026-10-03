@@ -2,41 +2,56 @@
 Course:
   - "[[AI Fluency]]"
 ---
-Discernment is the evaluative half of the [[Description]]–Discernment loop. It's the critical thinking you bring to every AI exchange — what you observe and judge informs how you describe better next time.
+Quality control system of your AI collaboration 
 
-The goal isn't to find flaws for their own sake. It's to generate useful signal that closes the loop and makes the next iteration sharper.
+Discernment is the evaluative half of the [[Description]]–Discernment loop. 
+Your ability to: 
+- critically evaluate what AI produces -> matches the intended outcome? 
+- how it produces -> followed your described process guidelines? 
+- how it behaves -> behavior as per your guidelines? 
 
-## The 3 Dimensions of Discernment
+It's the critical thinking you bring to every AI exchange — what you observe and judge informs how you describe better next time.
 
-### Product Discernment
-Evaluate the **quality of the output**:
-- Does it actually solve the problem?
-- Is it accurate, complete, and appropriately scoped?
-- Does it meet the success criteria you defined in your [[Description]]?
+The goal is to generate useful signal that closes the loop and make the next iteration sharper.
 
-### Process Discernment
-Evaluate the **quality of reasoning**:
-- Did it think through the problem logically?
-- Did it approach the problem correctly?
-- Did it choose the right method?
-- Did it sequence the work well?
 
-### Performance Discernment
-Evaluate the **quality of interaction and behavior**:
-- Was it clear in how it explained itself?
-- Did it ask good clarifying questions?
-- Did it build on your feedback, or ignore it?
-- Was it responsive to your direction during the conversation?
+## Product Discernment
+
+The ability to critically judge the **accuracy and value of AI-created outputs**
+
+When practicing product discernment, you act as a quality control system for your collaboration with the AI by asking critical questions such as:
+- **Is the information factually accurate?** 
+- **Is the output appropriate for my intended audience and purpose?** 
+- **Is it coherent and well-structured?** 
+- **Does it meet my specific requirements and solve the intended problem?** 
+
+## Process Discernment
+
+While product discernment focuses on the final result, process discernment requires you to monitor the AI's internal reasoning and actions to ensure they align with your goals.
+
+When practicing process discernment, look for potential pitfalls such as:
+- **Logical errors**: Did it think through the problem logically as specified in the process description?
+- **Lapses in attention** 
+- **Taking inappropriate steps** : Did it choose the right method and tools?
+- **Getting stuck** on one detail or falling into **circular reasoning** 
+
+
+To effectively guide and validate the AI's working process, use feedback instructions that:
+- Clearly point out the **exact process flaw**, such as a logical error, an inappropriate step, or getting fixated on a minor detail.
+- **Provide concrete suggestions**: Offer explicit guidance on how the AI should adjust its steps or explore alternative approaches.
+- **Supply revised instructions or examples**: Give updated instructions or reference examples to ensure human judgment and AI reasoning stay synchronized throughout complex tasks
+
+## Performance Discernment
+
+When evaluating performance, you should ask yourself:
+
+- **Is the interaction efficient** or unnecessarily complex?
+- Is the AI providing information in a **helpful way**?
+- Does it **respond well to your feedback** and direction?
+- Is the communication style (e.g., conciseness vs. depth) right for your current needs?
+
 
 ---
-
-> [!tip] The feedback pattern
-> Each discernment observation feeds back into your next description:
-> - You notice a gap → You add context
-> - You see misalignment → You clarify intent
-> - You spot a good element → You ask to amplify it
-> - You detect wrong reasoning → You explain your logic
-
----
+[[The Description–Discernment Loop]]
 
 *Prev: [[Description]] · Next: [[Diligence]]*

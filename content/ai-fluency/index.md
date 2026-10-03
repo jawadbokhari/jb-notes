@@ -15,6 +15,12 @@ Most of us start with AI the wrong way: we treat it like a search engine or a ve
 
 AI Fluency isn't a technical skill. It's about developing an **intellectual partnership** — learning to collaborate with AI rather than just instruct it.
 
+AI Fluency begins with and depends on your domain expertise. 
+> You are supposed to be an expert in your filed first and AI delegation second. 
+
+> The goal isn't to automate everything, but to create the most effective human-AI partnership for any given task or goal.
+
+
 These are my notes from working through the [AI Fluency framework](https://anthropic.skilljar.com/ai-fluency-framework-foundations).
 
 ---
