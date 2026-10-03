@@ -38,3 +38,9 @@ Use this as a thinking prompt when starting any project with AI.
 ### [[Diligence]]
 - What considerations around transparency and responsibility are important here?
 - Who needs to know AI was involved, and to what degree?
+
+---
+
+## Turn the 4Ds into standing instructions
+
+Copy-ready starter instructions for chat apps and coding agents, at three levels (You, Project, Skills): [[starter-instructions|Starter instructions]].
