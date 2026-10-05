@@ -9,7 +9,7 @@ tags:
 
 # How should one start with AI learning
 
-A learning path for developers and QA engineers. It runs in three tracks, in this order: a plain-language start, Anthropic's courses on working with Claude, then DeepLearning.AI's courses on building, checking and scaling agent work.
+A learning path for anyone who wants to work with AI, in any role. It runs in three tracks, in this order: a plain-language start, Anthropic's courses on working with Claude, then DeepLearning.AI's courses on building, checking and scaling agent work.
 
 Each course is marked ✅ (done), 🚧 (in progress) or ⬜ (planned). Each course sits in a table with a short summary and my takeaways, with a link to my notes where they exist.
 
@@ -25,7 +25,7 @@ Each course is marked ✅ (done), 🚧 (in progress) or ⬜ (planned). Each cour
 
 ## Track 1: AI for Everyone
 
-Goal: get comfortable with what AI can and cannot do, and write prompts that work. No coding needed. Everyone on the team, QA included, starts here. Take these in order: the first gives the vocabulary, the second the practical skill.
+Goal: get comfortable with what AI can and cannot do, and write prompts that work. No coding needed. Everyone on the team starts here, whatever their role. Take these in order: the first gives the vocabulary, the second the practical skill.
 
 |     | Course | Summary | My Takeaways |
 | --- | ------ | ------- | ------------ |
@@ -47,7 +47,7 @@ Take these in order.
 | ✅   | [Introduction to Agent Skills](https://academy.claude.com/courses/introduction-to-agent-skills) | Packaging a repeatable way of working so Claude applies it every time.                                     | Notes: [[ai-fundamentals/what-is-a-skill\|What is a skill]], [[ai-fundamentals/skills-vs-agents\|Skills vs agents]].                                                                                                                                    |
 | ✅   | [Introduction to Model Context Protocol](https://academy.claude.com/courses/introduction-to-model-context-protocol) | How MCP servers expose tools, resources and prompts to a client.                                           | MCP is not "just an API". It is three primitives (tools, resources, prompts) on top of any transport, and prompts turn a loose request into a structured workflow.                                                                                      |
 | ✅   | [Introduction to Subagents](https://academy.claude.com/courses/introduction-to-subagents) | Delegating work to focused helpers with their own context.                                                 | Notes: [[ai-fundamentals/sub-agents\|Sub-agents]].                                                                                                                                                                                                      |
-| 🚧  | [The AI-Native SDLC Playbook](https://academy.claude.com/courses/ai-native-sdlc-playbook)                                                | How to change planning, review, testing and deployment around Claude Code, not only how code gets written. | In progress. Likely the most relevant course for QA.                                                                                                                                                                                                    |
+| 🚧  | [The AI-Native SDLC Playbook](https://academy.claude.com/courses/ai-native-sdlc-playbook)                                                | How to change planning, review, testing and deployment around Claude Code, not only how code gets written. | In progress. Likely the most relevant course for anyone who owns testing, review or release.                                                                                                                                                                                                    |
 | ⬜   | [Building Effective Human Agent Teams](https://academy.claude.com/courses/building-effective-human-agent-teams) (beta) | From one person using AI to a team using it.                                                               | Not taken yet.                                                                                                                                                                                                                                          |
 | ⬜   | [AI Capabilities and Limitations](https://academy.claude.com/courses/ai-capabilities-and-limitations) | Where AI works and where it fails.                                                                         | Not taken yet. Also a good first course for cautious groups.                                                                                                                                                                                            |
 | ⬜   | [Model Context Protocol: Advanced Topics](https://academy.claude.com/courses/model-context-protocol-advanced-topics) | The next level after the introduction.                                                                     | Not taken yet. Take it after you have used MCP for a while.                                                                                                                                                                                             |
@@ -61,20 +61,20 @@ Take these in order, after the first six Anthropic courses, because they assume 
 |     | Course | Summary | My Takeaways |
 | --- | ------ | ------- | ------------ |
 | ✅ | [Agent Skills with Anthropic](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/) | A hands-on course on building skills. | A second pass on the Anthropic skills course. See [[ai-fundamentals/what-is-a-skill\|What is a skill]]. |
-| ⬜ | [Spec-Driven Development with Coding Agents](https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents) (with JetBrains) | Write a spec first, then plan, implement and verify with an agent. | Not started. Developers start here. |
-| ⬜ | [AI Code Review](https://www.deeplearning.ai/short-courses/ai-code-review/) | Reviewing agent-written code. | Not taken yet. Useful for developers and QA. |
-| ⬜ | [Evaluating AI Agents](https://www.deeplearning.ai/short-courses/evaluating-ai-agents/) | How to test something that gives a different answer each time. | Not taken yet. QA should take this one. |
-| ⬜ | [LLM Evaluation Course (Practice)](https://www.evidentlyai.com/llm-evaluation-course-practice) (Evidently AI, not DeepLearning.AI) | Hands-on evaluation of LLM output. | Not taken yet. Pairs with Evaluating AI Agents, so QA can take it right after. |
+| ⬜ | [Spec-Driven Development with Coding Agents](https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents) (with JetBrains) | Write a spec first, then plan, implement and verify with an agent. | Not started. The first course for anyone who writes code with an agent. |
+| ⬜ | [AI Code Review](https://www.deeplearning.ai/short-courses/ai-code-review/) | Reviewing agent-written code. | Not taken yet. Useful for anyone who reviews or approves agent-written code. |
+| ⬜ | [Evaluating AI Agents](https://www.deeplearning.ai/short-courses/evaluating-ai-agents/) | How to test something that gives a different answer each time. | Not taken yet. Take it if you test or judge AI output. |
+| ⬜ | [LLM Evaluation Course (Practice)](https://www.evidentlyai.com/llm-evaluation-course-practice) (Evidently AI, not DeepLearning.AI) | Hands-on evaluation of LLM output. | Not taken yet. Pairs with Evaluating AI Agents, so take it right after. |
 | ⬜ | [Agentic AI](https://www.deeplearning.ai/courses/agentic-ai/) (about 10 hours) | The conceptual backbone of agentic systems. | Not taken yet. The longest course, so it comes late. |
 | ⬜ | [Practical Multi AI Agents and Advanced Use Cases with crewAI](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/) | Multi-agent orchestration outside Anthropic's tooling. | Not taken yet. A second point of view. |
 
 ## Suggested path by role
 
-| Step | Developer | QA |
-| --- | --- | --- |
-| Start | Track 1, then Track 2 up to Agent Skills | Track 1, then Claude 101 and AI Fluency |
-| Build skill | Track 2 from MCP to the SDLC Playbook, then Agent Skills with Anthropic and Spec-Driven Development | The SDLC Playbook and AI Capabilities and Limitations, then AI Code Review |
-| Go deeper | AI Code Review, Evaluating AI Agents, Agentic AI | Evaluating AI Agents, LLM Evaluation, Agentic AI |
+| Step | Developer | QA | Manager or team lead |
+| --- | --- | --- | --- |
+| Start | Track 1, then Track 2 up to Agent Skills | Track 1, then Claude 101 and AI Fluency | Track 1, then Claude 101 and AI Fluency |
+| Build skill | Track 2 from MCP to the SDLC Playbook, then Agent Skills with Anthropic and Spec-Driven Development | The SDLC Playbook and AI Capabilities and Limitations, then AI Code Review | The SDLC Playbook, Building Effective Human Agent Teams and AI Capabilities and Limitations |
+| Go deeper | AI Code Review, Evaluating AI Agents, Agentic AI | Evaluating AI Agents, LLM Evaluation, Agentic AI | Evaluating AI Agents and Agentic AI, for the concepts rather than the exercises |
 
 ## What I left out
 
