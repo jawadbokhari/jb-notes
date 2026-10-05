@@ -4,7 +4,7 @@ title: "Template: Area Instructions (AGENTS.md / CLAUDE.md)"
 
 Instructions for any agent working inside one area: a repo, a folder, a vault, a tool or an account. Built from [[../guidelines/system-prompt-guidelines|the guidelines]], sections 4, 5 and 6.2. Target: under 200 lines.
 
-**How to use:** fill `AGENTS.md` from the first block and create `CLAUDE.md` from the second so Claude Code imports it. Delete sections that do not apply and all `<!-- -->` comments. Start small: add a rule when an agent makes the same mistake twice.
+**How to use:** fill `AGENTS.md` from the first block. Claude Code reads it natively, so skip `CLAUDE.md` unless you have Claude-only content; the second block is the fallback for tools that cannot read `AGENTS.md`. Delete sections that do not apply and all `<!-- -->` comments. Start small: add a rule when an agent makes the same mistake twice.
 
 ## `AGENTS.md`
 
@@ -55,7 +55,7 @@ Skipped steps first, then: done / also done unasked / needs my decision. Numbers
 - [Runbook]: `[path]`
 ```
 
-## `CLAUDE.md` (thin pointer)
+## `CLAUDE.md` (only for Claude-only content, or as a fallback pointer)
 
 ```markdown
 # [Area name]: Claude Code entrypoint

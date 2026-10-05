@@ -11,7 +11,7 @@ System instructions for a new agent or sub-agent: its job, inputs, tools, limits
 | Platform | File or field | Notes |
 |---|---|---|
 | Claude Code sub-agent | `.claude/agents/<name>.md` | Frontmatter as below; body is the system prompt |
-| Standalone agent in its own folder or repo | `AGENTS.md` (plus `CLAUDE.md` pointer) | Drop the frontmatter; put the description as the first line |
+| Standalone agent in its own folder or repo | `AGENTS.md` (no `CLAUDE.md` pointer in Claude Code) | Drop the frontmatter; put the description as the first line |
 | OpenAI Agents SDK | `instructions` (body), `handoff_description` (description) | Put tool limits in code, not only prose |
 | Gemini / Gems / custom GPT | system instructions field | Drop the frontmatter |
 

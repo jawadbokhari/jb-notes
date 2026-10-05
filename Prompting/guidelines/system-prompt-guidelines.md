@@ -11,7 +11,7 @@ Sources: [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/
 | You want to...                                                        | Level          | Template                                                | Lives in                                                                                              |
 | --------------------------------------------------------------------- | -------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Tell every AI how to work with *me*                                   | User           | [[../templates/user-system-prompt\|User System Prompt]] | `~/.claude/CLAUDE.md`, `~/.gemini/GEMINI.md`, ChatGPT custom instructions, Claude profile preferences |
-| Tell any agent how to behave inside one repo, folder, tool or account | Area           | [[../templates/area-instructions\|Area Instructions]]   | `AGENTS.md` (canonical) plus a thin `CLAUDE.md` pointer                                               |
+| Tell any agent how to behave inside one repo, folder, tool or account | Area           | [[../templates/area-instructions\|Area Instructions]]   | `AGENTS.md` (canonical); `CLAUDE.md` only for Claude-only content                                         |
 | Define a new agent or sub-agent with a job, tools and limits          | Agent          | [[../templates/agent-contract\|Agent Contract]]         | `.claude/agents/<name>.md`, an agent's own `AGENTS.md`, SDK `instructions`, a Gem or custom GPT       |
 | Standardise one repeatable task an existing agent runs                | Task           | [[../templates/task-workflow\|Task Workflow]]           | a workflow file, skill or command                                                                     |
 | Get one answer, once                                                  | One-off prompt | `templates/one-off/`                                    | the chat box                                                                                          |
@@ -42,10 +42,10 @@ User (me, everywhere)
 ## 4. Core principles (all levels)
 
 1. **Write for a smart newcomer.** If a capable colleague with no context would be confused, so will the model. Assume competence; do not explain what the model already knows.
-2. **Give the reason with the rule.** One clause is enough: "No ellipses, because output is read by a text-to-speech engine." Models generalise from the reason to cases the rule did not list.
+2. **Give the reason with the rule.** One clause is enough: "No ellipses, because output is read by a text-to-speech engine." Models generalise from the reason to cases the rule did not list. Style bans (em dashes, tone, greetings) need a reason too, or they look arbitrary and get dropped.
 3. **Say what to do.** Positive instructions beat lists of prohibitions. Keep "never" for safety and irreversible actions.
 4. **Use normal emphasis.** Capitals, "CRITICAL" and "You MUST" cause current models to over-apply a rule. If everything is urgent, nothing is.
-5. **Be concrete enough to verify.** "Run the tests before committing", not "make sure it works". If you cannot tell whether a rule was followed, rewrite it.
+5. **Be concrete enough to verify.** "Run the tests before committing", not "make sure it works". If you cannot tell whether a rule was followed, rewrite it. Vague wishes ("keep it brief") become a default you can check ("answer in the first sentence; about 150 words unless I ask for more"). Mark numbers you chose as estimates.
 6. **Start minimal, grow on evidence.** Add a rule when the same mistake happens twice, not for imagined cases. Budgets: user file about 30 to 80 lines, area file under 200, agent contract under 500.
 7. **Rules in the file, history elsewhere.** A short reason belongs with the rule. Rationale essays, change logs and post-mortems go in a separate note. Narrative in a spec invites narrative in the output.
 8. **Structure consistently.** Markdown headings or XML tags, the same scheme throughout. When a prompt carries long material, put the material first and the instructions last.
@@ -66,7 +66,7 @@ The core lesson from my instruction-drift case study: **instruction text does no
 4. **Explicit stop and escalate conditions.** Missing input, a failed tool, a conflicting rule, going outside its scope: say what the agent does in each case (stop, ask, report), not "use judgment".
 5. **Evidence for claims.** Every number comes with the command or source that produced it. "X will happen" needs evidence; otherwise say "I expect X because Y". Where a record and the primary source disagree, the primary source wins.
 6. **Declare scope expansion.** Anything done beyond the request is listed separately ("Also did, unasked"). This keeps useful initiative without hiding it.
-7. **Fixed report shape.** Done / also did unasked / could not do / needs your decision. Skipped steps are stated first.
+7. **Fixed report shape, with a trigger.** Skipped or failed / done / also did unasked / needs your decision, skipped steps first. Apply it only after multi-step or file-changing work, show only non-empty parts, keep "done" to one line and do not restate what the diff shows. Without a trigger and a cap, the shape fights the brevity rule.
 8. **Challenge the diagnosis.** When an agent explains its own failure, first ask whether the instruction was already in its context. Do not fix a compliance failure by adding more instruction text; add a required output or a hard control instead.
 9. **Enforce outside the prompt where it matters.** Tool allowlists, permission rules, hooks, turn limits and guardrails do not depend on the model's attention.
 
@@ -77,11 +77,11 @@ The core lesson from my instruction-drift case study: **instruction text does no
 - **Contains:** who I am in two or three lines, the domains I work across and the boundaries between them, how to communicate with me, the default autonomy line, how to handle uncertainty, and the report shape I want.
 - **Leaves out:** project facts, current goals that change each quarter, long biographies, tool-specific mechanics. Those belong in area files or memory.
 - **About me, not a persona for the AI.** Describe the user and the working relationship. Keep any role for the assistant to one functional line.
-- **Portable core.** Write it once in plain Markdown so the same text works in Claude, ChatGPT and Gemini. Add tool-specific notes as a clearly separate tail section.
+- **Portable core.** Write it once in plain Markdown so the same text works in Claude, ChatGPT and Gemini. Add tool-specific notes as a clearly separate tail section. Keep tool rules in the core at goal level ("GitLab: `glab` CLI only"); put mechanics (server names, script paths, failure workarounds, commands) in the tool's own file.
 
 ### 6.2 Area level (`AGENTS.md` / `CLAUDE.md`)
 
-- `AGENTS.md` is the canonical file because 30+ tools read it. `CLAUDE.md` is a thin pointer that imports it with `@AGENTS.md`. Do not duplicate content between them.
+- `AGENTS.md` is the canonical file because 30+ tools read it. Claude Code can read it natively (setting `agents-md@builtin` = `claude-md-and-agents-md`), so add no `CLAUDE.md` pointer. Add a `CLAUDE.md` only for content that is truly Claude-only, and never restate `AGENTS.md` in it. Where a tool cannot read `AGENTS.md` natively, a thin `CLAUDE.md` containing `@AGENTS.md` is the fallback.
 - **Contains:** purpose in one or two lines, where things live, the commands that matter, conventions with reasons, the act / ask first / never boundaries, required checkpoints for risky actions, and links to longer references.
 - **Reference, do not copy.** Link to specs, style guides and runbooks instead of pasting them in.
 - **Nearest file wins.** Put sub-area files only where rules genuinely differ; each rule has one home.
@@ -137,7 +137,7 @@ Use before publishing or changing a file. Tick manually.
 - [ ] Tool-specific notes kept in a separate section
 
 **Area level**
-- [ ] `AGENTS.md` is canonical; `CLAUDE.md` only points to it
+- [ ] `AGENTS.md` is canonical; any `CLAUDE.md` holds only Claude-only content
 - [ ] Commands and locations are current and verifiable
 - [ ] Risky actions have a required checkpoint
 - [ ] Long material is linked, not pasted
