@@ -26,8 +26,8 @@ Be open about **AI's role in your work**:
 
 ---
 
-> [!note] The Delegation–Diligence link
-> Diligence completes the loop with [[Delegation]]: you can't delegate well without knowing what you remain responsible for, and you can't be diligent without understanding what you handed off in the first place.
+> [!note] Diligence and the other Ds
+> In Anthropic's diagram, Diligence is linked to Delegation, Description and Discernment. The course says the other three competencies mainly address working effectively and efficiently, while Diligence addresses the ethical and safety side. When you share AI-generated content, you, not the AI, are responsible for its accuracy and appropriateness (Lesson 10, A closer look at Diligence).
 
 ---
 

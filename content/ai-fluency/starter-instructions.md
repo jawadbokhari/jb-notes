@@ -5,9 +5,9 @@ tags:
   - prompting
 ---
 
-Companion page for the talk "AI Fluency: work with AI like a new colleague". Copy, edit and paste. A new colleague needs two things: a clear request for each job, and a proper brief on day one. This page gives you both. The ladder in the talk (ask, assign, onboard, think together, build a team) is my own construct. The 4D framework it maps to at the end is Anthropic's, from their [[4d-framework|AI Fluency course]].
+Companion page for the talk "AI Fluency: work with AI like a new colleague". Copy, edit and paste. A new colleague needs two things: a clear request for each job, and a proper brief on day one. This page gives you both. The four habits in the talk (say what you mean, brief once, think together, stay the owner) are my own construct, and the sections below follow them. The 4D framework behind them is Anthropic's, from their [[4d-framework|AI Fluency course]].
 
-## Assign: the four parts of a request
+## Say what you mean: the four parts of a request
 
 When you hand AI a job, tell it four things. Role ("act as...") is optional: it adds tone, not knowledge.
 
@@ -29,7 +29,7 @@ Success criteria: Names two requirements from the post with proof from my CV for
 
 Without the last three parts you get a cover letter. With them you get yours.
 
-## Onboard: three levels
+## Brief once: three levels
 
 You brief a new colleague once, not every morning. Standing instructions live at three levels. Put each rule at the lowest level that needs it.
 

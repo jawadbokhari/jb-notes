@@ -39,25 +39,17 @@ The framework organizes AI collaboration into four competencies:
 
 ---
 
-## The Two Loops
+## How the 4Ds link
 
-The 4Ds aren't independent — they form two reinforcing loops.
+Anthropic's diagram of the framework puts the four Ds in a diamond (Delegation at the top, Description and Discernment at the sides, Diligence at the bottom) with a double-headed arrow between every pair. The four are connected, not a sequence.
 
-### Delegation ↔ Diligence
+The one link the course describes as a loop is [[The Description–Discernment Loop|Description and Discernment]]. Every exchange with AI is a loop: you describe what you want, you evaluate what you get, and your evaluation informs how you describe better next time. The goal is to tighten this loop, narrowing the gap between what you meant and what AI produced.
 
-You can't delegate well without knowing what you're responsible for. And you can't be diligent without understanding what you delegated in the first place.
-
-| **Delegation** | **Diligence** |
-|---|---|
-| **Problem Awareness** — understand your goals and the work involved | **Creation Diligence** — be thoughtful about which AI systems you use and how |
-| **Platform Awareness** — know what different AI systems can do | **Transparency Diligence** — be open about AI's role in your work |
-| **Task Delegation** — divide work strategically between you and AI | **Deployment Diligence** — own the final outcome |
+Discernment can also send you back further. When it flags a problem, better description is often the fix, but sometimes you need to rethink your delegation decisions: you may be using the wrong tool, or approaching the problem in entirely the wrong way.
 
 > Effective delegation requires both expertise in your field *and* an understanding of AI capabilities. Without the first, you can't judge the output. Without the second, you won't know what's worth delegating.
 
-### Description ↔ Discernment
-
-Every exchange with AI is a loop: you describe what you want, you evaluate what you get, and your evaluation informs how you describe better next time. The goal is to tighten this loop — narrowing the gap between what you meant and what AI produced.
+Sources: Anthropic, AI Fluency: Framework & Foundations (Dakan and Feller), [Lesson 2B, The 4D Framework](https://www.youtube.com/watch?v=W4Ua6XFfX9w) (diagram at 0:44, description-discernment loops at 3:04) and [Lesson 8, A closer look at Discernment](https://www.youtube.com/watch?v=Y0KidGr9Z2Y) (4:28).
 
 ---
 
