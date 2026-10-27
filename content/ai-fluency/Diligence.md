@@ -5,7 +5,7 @@ Course:
 > [!info] AI disclosure
 > Drafted with Claude's help and reviewed by me. Based on the [AI Fluency Framework course](https://academy.claude.com/courses/ai-fluency-framework-foundations).
 
-Diligence is about taking responsibility for your AI collaboration. It's the ethical and accountability dimension of AI Fluency — being thoughtful about which AI systems you use, being honest about their role in your work, and owning the outcomes you share with others.
+Diligence is about taking responsibility for your AI collaboration. It's the ethical and accountability dimension of AI Fluency: being thoughtful about which AI systems you use, being honest about their role in your work, and owning the outcomes you share with others.
 
 ## The 3 Dimensions of Diligence
 
@@ -29,24 +29,30 @@ Be open about **AI's role in your work**:
 
 ## Diligence in everyday communication
 
-Transparency Diligence is mostly about ordinary messages, not published work. Here is how it looks in practice.
+Diligence is mostly about ordinary messages, not published work. Here is how it looks in practice.
 
-### Example: the wall of AI text
+### Example: the message that is too long
 
-A colleague shared a post about how disrespectful it feels to receive a wall of AI-generated text or email. My reply was: if you know it came from AI, give it to your own AI instead of reading it yourself. That only works if the sender says it is AI-generated. Without that line, the reader spends careful attention on text nobody wrote with that attention. The colleague agreed: the disclosure goes at the top of the content, so both the reader and the reader's AI know what they are dealing with.
+In an agentic session, the agent often drafts an email or chat message for a colleague. The draft is often too long and hard to follow, and this happens so often that it becomes a habit. The sender has the whole session in mind, so the draft reads as clear. The reader has none of that context, and pays for the length with their attention.
 
-This is Transparency Diligence, and it links to the other two dimensions. Disclosure tells the reader how much checking to expect. Deployment Diligence says the sender has done that checking.
+A label saying "AI-generated" does not fix this: it tells the reader what they are holding, not whether it is worth reading. Each of the four Ds has a part in the fix:
+
+- **Delegation (before).** Decide whether the agent should draft this at all. A two-line answer is often faster to write yourself than to cut down.
+- **Description (before).** Tell the agent who the reader is, what you want from them and how long the message may be. For example: "Five lines, the ask first, no background the reader already has."
+- **Discernment (during).** Read the draft as the recipient would, as if you had never seen the session. Can they tell what you want in the first two lines? Is anything there only because the agent happened to have it?
+- **Deployment Diligence (at send).** Sending is the moment you own the message. The test: can the reader act on it in about 30 seconds? If not, shorten it yourself before it goes.
+- **Transparency Diligence (with the message).** If the message is still long, say at the top that AI drafted it, so the reader can skim it or hand it to their own assistant. This is the fallback, not the fix.
 
 ### Other places it applies
 
-- **Emails and chat messages.** AI can draft them, but I read and edit every one before I send it. A long AI-drafted message gets a short note at the top, so the reader can choose to skim it or hand it to their own assistant.
+- **Emails and chat messages.** AI can draft them, but I read and edit every one before I send it, and cut it to what the reader needs. If it is still long, a short note at the top lets the reader skim it or hand it to their own assistant.
 - **Meeting notes.** Notes generated from a meeting recording are labelled as AI-generated, because they can miss a decision or put words in someone's mouth. I fix them before anyone acts on them.
-- **Code commits.** This one is settled as a written rule in my [agent git guidelines](https://github.com/jawadbokhari/agent-git-guidelines) (P1): every commit an agent drafted or materially changed carries an `Assisted-by:` trailer naming the agent. Reviewers then know to check it as AI-assisted work. Only a human adds `Signed-off-by:`, because that line certifies that a person reviewed the change (Deployment Diligence). The guidelines also say a trailer is a label, not proof (P5), so disclosure does not replace checking.
-- **Articles and notes.** This note carries a disclosure line at the top, for the same reason.
+- **Code commits.** My [agent git guidelines](https://github.com/jawadbokhari/agent-git-guidelines) make this a written rule. Every commit an agent drafted or materially changed carries an `Assisted-by:` line naming the agent, so reviewers know to check it as AI-assisted work (P1). Only a human adds `Signed-off-by:`, because that line certifies that a person reviewed the change (Deployment Diligence). A label is not proof of checking (P5), so disclosure does not replace review.
+- **Articles and notes.** This note has a disclosure line at the top, so readers know AI helped and that I reviewed it.
 
 ### A simple rule
 
-Put the disclosure at the top, in one line. Say what AI did (drafted, summarised, translated) and what you did (reviewed, corrected, approved). The reader should not have to guess either.
+Shorten first, disclose second. Cut the message until the reader can act on it in about 30 seconds. Then put the disclosure at the top, in one line: what AI did (drafted, summarised, translated) and what you did (reviewed, corrected, approved). That way the reader does not have to guess.
 
 ---
 
