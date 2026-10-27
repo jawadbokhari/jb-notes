@@ -61,4 +61,4 @@ Shorten first, disclose second. Cut the message until the reader can act on it i
 
 ---
 
-*Prev: [[Discernment]] · Next: [[4d-framework|Applying the 4Ds]]*
+*Prev: [[Discernment]] · Next: [[4D-Framework|Applying the 4Ds]]*

@@ -5,7 +5,7 @@ tags:
   - prompting
 ---
 
-Companion page for the talk "AI Fluency: work with AI like a new colleague". Copy, edit and paste. A new colleague needs two things: a clear request for each job, and a proper brief on day one. This page gives you both. The four habits in the talk (say what you mean, brief once, think together, stay the owner) are my own construct, and the sections below follow them. The 4D framework behind them is Anthropic's, from their [[4d-framework|AI Fluency course]].
+Companion page for the talk "AI Fluency: work with AI like a new colleague". Copy, edit and paste. A new colleague needs two things: a clear request for each job, and a proper brief on day one. This page gives you both. The four habits in the talk (say what you mean, brief once, think together, stay the owner) are my own construct, and the sections below follow them. The 4D framework behind them is Anthropic's, from their [[4D-Framework|AI Fluency course]].
 
 ## Say what you mean: the four parts of a request
 
