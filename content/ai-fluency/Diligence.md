@@ -41,7 +41,7 @@ This is Transparency Diligence, and it links to the other two dimensions. Disclo
 
 - **Emails and chat messages.** AI can draft them, but I read and edit every one before I send it. A long AI-drafted message gets a short note at the top, so the reader can choose to skim it or hand it to their own assistant.
 - **Meeting notes.** Notes generated from a meeting recording are labelled as AI-generated, because they can miss a decision or put words in someone's mouth. I fix them before anyone acts on them.
-- **Code and documents.** Commits and pull requests carry an `Assisted-by` line, so reviewers know to check them the way they would check any AI-assisted change.
+- **Code commits.** This one is settled as a written rule in my [agent git guidelines](https://github.com/jawadbokhari/agent-git-guidelines) (P1): every commit an agent drafted or materially changed carries an `Assisted-by:` trailer naming the agent. Reviewers then know to check it as AI-assisted work. Only a human adds `Signed-off-by:`, because that line certifies that a person reviewed the change (Deployment Diligence). The guidelines also say a trailer is a label, not proof (P5), so disclosure does not replace checking.
 - **Articles and notes.** This note carries a disclosure line at the top, for the same reason.
 
 ### A simple rule
