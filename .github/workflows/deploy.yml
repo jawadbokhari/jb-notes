@@ -33,6 +33,7 @@ jobs:
           rm -rf .quartz-build/content/*
           cp -r content/. .quartz-build/content/
           cp quartz.config.ts .quartz-build/quartz.config.ts
+          cp overrides/Footer.tsx .quartz-build/quartz/components/Footer.tsx
 
       - name: Setup Node
         uses: actions/setup-node@v4

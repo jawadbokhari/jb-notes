@@ -74,6 +74,7 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         enableRSS: true,
       }),
+      Plugin.CustomOgImages(),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
