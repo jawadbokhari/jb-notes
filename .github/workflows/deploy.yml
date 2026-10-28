@@ -34,6 +34,7 @@ jobs:
           cp -r content/. .quartz-build/content/
           cp quartz.config.ts .quartz-build/quartz.config.ts
           cp overrides/Footer.tsx .quartz-build/quartz/components/Footer.tsx
+          cp overrides/icon.png .quartz-build/quartz/static/icon.png
 
       - name: Setup Node
         uses: actions/setup-node@v4
