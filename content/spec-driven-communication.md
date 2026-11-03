@@ -6,7 +6,6 @@ tags:
   - coding-agents
 ---
 
-
 When you hand a long task to an AI, it does not ask what you meant. It guesses, and you find out later. The fix is old and simple: agree on the work in writing before it starts, and decide in advance how you will know it is done. I learned a structured way to do that from a course for programmers, and I think it works for anyone who delegates to AI, whether the task is code, a report or fixing a deployment process.
 
 Paul Everitt's [Spec-driven development with coding agents](https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents) (DeepLearning.AI with JetBrains) is an excellent beginner course on the fundamentals of spec-driven development. It is mainly about coding agents, but for me it unlocked something wider: how to build shared understanding with an AI so that I can delegate longer tasks to it with higher confidence.
@@ -27,12 +26,12 @@ Before I involve the agent, I write down, on paper or in a note:
 - What is out of scope: work I am not asking for, even if it looks useful.
 - What I know and what I do not know yet.
 
-Stage 0 comes before the constitution (the standing agreement with the agent, stage 1). The ambiguity check in stage 2, where the agent lists what my written problem leaves open, then sharpens it.
+Stage 0 comes before the constitution (the standing agreement with the agent, stage 1). The ambiguity check in stage 2 then sharpens it: the agent lists what my written problem leaves open.
 
 Two cautions:
 
 - The aim is a clear problem, not a finished solution. Keep it to about a page. Heavy up-front design is the waterfall risk that critics warn about, and some clarity only comes from trying. When more clarity stops changing what I would do, I stop.
-- That thinking alone first beats thinking with the agent is my opinion. I think it stops me anchoring on the agent's framing.
+- In my opinion, thinking alone first beats thinking with the agent, because it stops me anchoring on the agent's framing.
 
 To improve the first draft with the agent, I use prompts that make it question me instead of proposing solutions: an interview, one question at a time, until the problem is clear.
 
@@ -112,9 +111,7 @@ My hypothesis is that the method works for any task where I can state the end st
 
 I have started applying this outside code. The work was a deployment of a customer-experience platform on a Kubernetes cluster spread across two sites. The aim was not only to install it once. It was to fix the deployment process: improve the automated deployment script, then test end to end that the platform stays available when parts of it fail.
 
-So the definition of done was a check, not a finished install: after deployment, the high-availability scenarios are tested end to end. I have completed that testing for the two-site deployment.
-
-The agent cannot claim the deployment works without passing those checks, and a new session can resume from the last verified step.
+The agent cannot claim the deployment works until the failure tests pass, and a new session can resume from the last verified step.
 
 ## Does it still hold?
 
