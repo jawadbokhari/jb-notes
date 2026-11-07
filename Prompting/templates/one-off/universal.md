@@ -9,12 +9,16 @@ Use as the default skeleton for any non-trivial request.
 
 ```
 Context: [Background information]
-Role: [Who Claude should act as]
+Purpose: [What the output is for, who reads it, what a bad answer looks like]
+Role: [One line, only if it changes the answer]
 Task: [Specific request]
-Constraints: [Limitations or requirements]
-Format: [How to structure the output]
+Constraints: [Limitations or requirements, each with its reason]
+Format: [How to structure the output, and how long]
 Examples: [If needed, show desired style]
+Done when: [Checks the answer must pass]
 ```
+
+Put long pasted material above this block, so the instructions come last. The Purpose and Done when lines come from [[../../techniques/foundational|Foundational Techniques]] and are not in the source.
 
 ## Problem-Solving Framework
 
@@ -33,4 +37,4 @@ Claude, analyze this problem and provide:
 - Risk mitigation strategies
 ```
 
-> Verify any critical risk assessments with domain experts — this is a structuring tool, not a substitute for expert judgment.
+> Verify any critical risk assessments with domain experts: this is a structuring tool, not a substitute for expert judgment.

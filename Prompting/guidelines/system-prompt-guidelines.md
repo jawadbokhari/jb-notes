@@ -4,7 +4,7 @@ title: "Guidelines: System Prompts and Agent Contracts"
 
 How to write standing instructions for AI: a personal system prompt, an area-level file (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`), and a contract for an agent or sub-agent. Model-agnostic, with vendor notes at the end. Templates that apply these rules live in `templates/`.
 
-Sources: [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/ai-agent-system-instructions|AI Agent System Instructions]], [[../sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files]], [[../sources/google-prompt-engineering-whitepaper|Google Prompt Engineering Whitepaper]], [[../sources/mastering-claude-ai|Mastering Claude AI]], and my own instruction-drift case study (private vault note, lessons summarised in section 5).
+Sources: [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/prompt-optimization-guide|Prompt Optimization Guide]], [[../sources/ai-agent-system-instructions|AI Agent System Instructions]], [[../sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files]], [[../sources/google-prompt-engineering-whitepaper|Google Prompt Engineering Whitepaper]], [[../sources/mastering-claude-ai|Mastering Claude AI]], and my own instruction-drift case study (private vault note, lessons summarised in section 5).
 
 ## 1. Pick the right artefact
 
@@ -114,7 +114,10 @@ The core lesson from my instruction-drift case study: **instruction text does no
 | Fixing a missed rule by adding more rules | Longer file, lower adherence | A required checkpoint, a hook, or deleting a conflicting rule |
 | Copying rules into every sub-folder file | Copies drift apart | One home per rule, nearest file wins |
 | Current state in the instructions (members, tickets, configs) | Stale within days | Point to the live source |
-| "Let's think step by step" everywhere | Built-in reasoning makes it redundant | Ask for a plan or visible reasoning only where you will check it |
+| "Let's think step by step" everywhere | Built-in reasoning makes it redundant | Ask for a plan or a checkable artefact only where you will check it |
+| "Write out your reasoning" / "think carefully before answering" | Thinking is always on in Fable 5.1 and Opus 5.5; written-reasoning requests may be declined, and thinking lines slow chat replies | Set effort; ask for outputs you can check (weaknesses, rubric result) |
+| Carrying an effort or thinking setting over to a new model | Effort names map to different amounts of thinking per model | Start at the new model's default and re-test |
+| "Always ask at most N questions" | A quota again, in the other direction | Ask on triggers |
 
 ## 8. Review checklists
 
@@ -153,6 +156,6 @@ Use before publishing or changing a file. Tick manually.
 
 ## 9. Vendor notes
 
-- **Claude.** Most responsive to the system prompt of the three; tone down emphasis written for older models. XML tags work well. Claude Code: `CLAUDE.md` under 200 lines, HTML comments are stripped (free notes to maintainers), sub-agents defined in `.claude/agents/*.md` with `name`, `description`, `tools`, `model`. Check Anthropic's per-model migration notes when switching models.
+- **Claude.** Most responsive to the system prompt of the three; tone down emphasis written for older models. XML tags work well. Follows wording literally: say "make the change" when you want action, and ask explicitly for anything beyond the task. Claude 5 models think by default (always on for Fable 5.1 and Opus 5.5), so leave reasoning instructions out and use effort; Opus 5 runs long, so state a length. Model and effort choice: [[../techniques/model-choice-and-effort|Model Choice and Effort]]. Claude Code: `CLAUDE.md` under 200 lines, HTML comments are stripped (free notes to maintainers), sub-agents defined in `.claude/agents/*.md` with `name`, `description`, `tools`, `model`. Check Anthropic's per-model migration notes when switching models.
 - **OpenAI.** Defaults toward finishing the task end to end without pausing; if you want confirmation steps, say so explicitly. Formal authority order: platform > developer > user. Agents SDK uses `instructions`, `handoff_description`, and input, output and tool guardrails. Reads `AGENTS.md` (Codex).
 - **Gemini.** "Avoid overly persuasive language." Few-shot examples by default. Context first, question last. Gemini CLI concatenates global, project and component `GEMINI.md` files and can be configured to read `AGENTS.md`.

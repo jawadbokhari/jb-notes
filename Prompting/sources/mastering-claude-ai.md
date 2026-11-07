@@ -1,6 +1,11 @@
 ---
 title: "Source: Mastering Claude AI (Ryan Dickey)"
+source_type: book
+currency: partly-dated
+reviewed: 2026-11-07
 ---
+
+Currency (reviewed 2026-11-07): the prompt anatomy, pitfalls, constraint engineering and recovery advice hold; basic and recursive chain of thought, elaborate role-play and the iteration formulas are retired, see [[../techniques/retired|Retired Techniques]].
 
 Condensed extraction of the prompting-technique content from *Mastering Claude AI: Practical Journey from First Prompts to Pro with Claude AI* (Ryan Dickey, Apress/Springer, 2025). Only prompting-relevant chapters covered — the book also has chapters on writing, research, coding, data viz, business/education/creative applications, troubleshooting, and ethics that aren't prompting technique per se.
 

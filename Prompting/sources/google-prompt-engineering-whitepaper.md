@@ -1,6 +1,11 @@
 ---
 title: "Source: Prompt Engineering Whitepaper (Google, Lee Boonstra)"
+source_type: whitepaper
+currency: partly-dated
+reviewed: 2026-11-07
 ---
+
+Currency (reviewed 2026-11-07): best practices and step-back prompting hold; chain of thought, tree of thoughts, manual ReAct, BLEU/ROUGE prompt engineering and the sampling tables are retired or downgraded for current models, see [[../techniques/retired|Retired Techniques]].
 
 Condensed extraction of *Prompt Engineering* (Lee Boonstra, Google, September 2024, v4). Focused on Gemini/Vertex AI Studio but the techniques are model-agnostic. Page numbers below refer to the whitepaper's own pagination (footer numbers, not PDF page count).
 

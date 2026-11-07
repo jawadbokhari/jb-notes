@@ -1,6 +1,11 @@
 ---
 title: "Source: AI Agent System Instructions (Dust Blog + Claude Code Tutorial)"
+source_type: article
+currency: partly-dated
+reviewed: 2026-11-07
 ---
+
+Currency (reviewed 2026-11-07): the prompts-vs-instructions split and the three-tier boundaries hold; "always ask clarifying questions" and "always plan first" are replaced by trigger-based asking and reversibility, see [[../guidelines/system-prompt-guidelines|System Prompt Guidelines]] section 7.
 
 Condensed extraction from two articles: the Dust Blog post *"How to Write AI Agent Instructions That Actually Work"* and the *Claude Code Agent Tutorial* ("How to Build an AI Agent with Claude Code"). Both cover the same underlying question: how to author persistent system instructions (`CLAUDE.md`, an agent builder's system prompt, etc.) rather than one-off prompts.
 

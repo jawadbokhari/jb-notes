@@ -1,67 +1,72 @@
 ---
 title: Advanced Prompting Techniques
+reviewed: 2026-11-07
 ---
 
-Source: [[../sources/mastering-claude-ai|Mastering Claude AI]], Ch.10.
+Techniques for work where a wrong answer is costly: plans, designs, analyses, long agent runs. Synthesised from [[../sources/prompt-optimization-guide|Prompt Optimization Guide]], [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/google-prompt-engineering-whitepaper|Google whitepaper]] and [[../sources/mastering-claude-ai|Mastering Claude AI]] Ch.10. Basics are in [[foundational|Foundational Techniques]].
 
-> These don't fix fundamental reasoning/knowledge limits — they give more systematic structure to pattern-recognition, so every technique here needs a built-in human validation step.
+**Ask for artefacts, not reasoning.** Current models think internally (always on for Fable 5.1 and Opus 5.5). Every technique below asks for something you can read and check: a weakness list, a revised draft, a rubric result. Do not ask the model to write out its reasoning in the answer; that duplicates its thinking, and Fable 5.1, Opus 5.5 and Sonnet 5.5 may decline it as reasoning extraction (Anthropic, checked 2026-11-07). See [[retired|Retired Techniques]].
 
-## 1. Recursive chain of thought
-Layered analysis where each level questions and refines the previous one — not just a single linear "show your work."
+## Review techniques
 
-```
-Level 1: Identify the core issue
-Level 2: Question Level 1's assumptions — what's missing?
-Level 3: Synthesize 1+2 into a refined understanding
-Level 4: Find the pattern between initial and refined understanding
-Level 5: Apply that pattern to what hasn't been considered yet
-```
+### 1. Draft, critique, revise
+One prompt: give a draft, list its three biggest weaknesses, then a revised version. A self-review without back-and-forth. Replaces the older "recursive chain of thought" ladders, which prescribed the thinking instead of the output. (Prompt Optimization Guide)
 
-**Risk**: errors compound across levels. Validate after each level before continuing — if a level is wrong, everything built on it is wrong too. Diminishing returns past ~2–3 levels for most tasks (per Appendix A); go deeper only for genuinely layered problems.
+### 2. Adversarial review
+The model attacks a draft, plan or design as a skeptical reviewer, looking for failure scenarios, risks and bias. Unlike a quality check, it assumes something is wrong and hunts for it. Ask for concrete failures ("input X produces wrong result Y"), not general concerns.
 
-**Variant — self-questioning cascade**: after an initial solution, have Claude ask itself 3 critical questions, answer them, ask 3 deeper questions from those answers, then revise the original solution and explain what changed.
+### 3. Multi-perspective
+Argue the problem from named viewpoints (sponsor, skeptic, end user, operator), then synthesise one recommendation. Counters the pull toward the most agreeable answer. Variants: "how would a [role] approach this?", or analysis across stakeholder impact, resources, risk, timeline and success metrics. (Prompt Optimization Guide, Mastering Claude AI App. A)
 
-## 2. Meta-prompting loops
-Not "ask Claude to help write a prompt" (that's the basic version in [[foundational|foundational techniques]]) — this is a **tracked, multi-round improvement loop** with objective criteria defined *before* starting:
+### 4. Rubrics
+Define good as a handful of yes-or-no checks and have the model check its output against them before answering, reporting any that fail. The same idea scales to agents as a definition of done. (Prompt Optimization Guide)
 
-```
-Attempt 1 → evaluate: what worked? what to improve? how to adjust next prompt?
-Attempt 2 (refined) → evaluate again → ...
-```
+### 5. Step-back
+First ask a general question ("what makes a migration plan safe?"), then feed the answer into the specific task. Pulls in background knowledge before the model commits to specifics. (Google p.25-28)
 
-Rate outputs on defined axes (e.g. clarity 1–10, completeness 1–10, actionability 1–10) instead of vibes — otherwise you can't tell real improvement from noise. AI cannot truly "optimize"; it responds to instructions about improvement — the human is the one evaluating and steering.
+## Prompt improvement
 
-## 3. Constraint engineering
-Deliberately extreme/"impossible" constraints force exploration outside the default generic answer:
+### 6. Meta-prompting
+- **Before the task:** "What would you need from me to do this well?" Finds missing context for the cost of one turn.
+- **On the prompt:** ask the model to rewrite your prompt, critique its rewrite, and give a final version under a length cap (rewrites bloat).
+- **Conflict check:** ask it to list contradictory or redundant instructions, then make surgical edits. Typical conflicts: brevity vs. completeness, autonomy vs. asking first. (OpenAI GPT-5.1 guide)
 
-```
-Solve [problem] with:
-- Zero budget
-- No new technology
-- Must work for opposing groups
-- Implement by tomorrow
-- Creates no new problems
-```
+### 7. Evaluate, do not eyeball
+For prompts you reuse: a small test set of real inputs, explicit criteria scored per run, a log of each version and result. Re-run it when the model changes. A model or LLM judge can score runs; you still decide what counts as good. (Google p.62-63, Mastering Claude AI Ch.10)
 
-Produces *novel*, not automatically *good*, ideas. Always run a feasibility filter afterward — many "impossible constraint" solutions sound clever but need real-world modification (legal, resourcing, timing) before they're usable.
+### 8. Compare runs and tiers
+- Run the same prompt two or three times; where answers disagree, the task is under-specified or genuinely uncertain.
+- Run it on two model tiers; if results match, the cheaper tier is enough for that kind of task. (Prompt Optimization Guide)
 
-**Cascading-constraint variant** — useful for finding the essential core of an idea: explain the same thing at shrinking budgets (full explanation → half the words → half again → one metaphor → a single self-answering question). Whatever survives every cut is the core insight — feed that back into the real explanation, don't ship the stripped version as-is.
+## Creative techniques
 
-## Combining all three
-Recursive understanding (what's the real problem?) → meta-prompt evolution (what questions should we actually be asking?) → constraint breakthrough (solve it with only what we already have) → systematic validation (test small, get expert feedback, refine). Each stage has its own quality-check gate — don't chain them without checking.
+### 9. Constraint engineering
+Extreme constraints ("zero budget, no new technology, live by tomorrow") push past the generic answer. Produces novel, not good, ideas: run a feasibility filter afterwards. **Cascading variant:** explain the idea at shrinking budgets (full, half, half again, one metaphor, one question); what survives every cut is the core. (Mastering Claude AI Ch.10)
 
-## Decision framework — which technique, when
+### 10. Brainstorm with a quota for the unusual
+"Ten approaches, at least three unconventional." Forces range before convergence. (Mastering Claude AI App. A)
 
-| Technique | Use when |
+## Long-running and agentic work
+
+- **State the completion condition up front** and keep the parts in a checklist the model updates (a to-do tool or a file).
+- **Treat a text-only end of turn as a report, not proof of completion.** If items remain open and no blocker is stated, name them and ask it to continue; stop after two or three automatic continuations. (Anthropic, Opus 5.5 guide)
+- **Name the early stops you do not want** (summary that announces the next step instead of taking it; offering to wait) and the ones you do (blocked on the user). Keep confirmation for risky or irreversible actions.
+- **Tell it about context limits** when the harness compacts or saves state, so it does not wrap up early.
+- **Tests or checks first** for multi-session work, tracked in a structured file.
+
+## Which technique, when
+
+| Situation | Use |
 |---|---|
-| Simple prompting | Quick answers, straightforward problems, high-stakes facts needing verified info |
-| Recursive CoT | Layered analysis needed, assumptions need systematic examination, moderate (non-critical) stakes, time allows multi-step process |
-| Meta-prompting | Process improvement is the goal itself, quality is objectively measurable, time for iteration |
-| Constraint engineering | Creative block, conventional approaches failing, you have the domain expertise to judge feasibility |
+| Quick, clear task | Foundational only |
+| Ambiguous or high-stakes ask | Ask first (meta-prompting before the task) |
+| Plan, design or recommendation | Draft, critique, revise, plus adversarial review |
+| Contested decision | Multi-perspective |
+| Output must meet a standard | Rubric |
+| Reusable prompt | Evals, conflict check, compare tiers |
+| Creative block | Constraint engineering, brainstorm quota |
+| Long agent run | Completion condition, checklist, continuation rule |
 
-## Recognizing failure and recovering
-Signs it's not working: reasoning turns circular/contradictory, improvements plateau or feel artificial, solutions ignore practical requirements, or the process has gotten more complex than the original problem.
+## When a technique is failing
 
-Recovery: **simplify back to basic prompting → validate key claims independently → get expert/domain input → test incrementally before full rollout → know when to stop** (some problems aren't prompt-shaped at all).
-
-See also: [[foundational|Foundational Prompting Techniques]]
+Signs: answers get longer but not better, reasoning turns circular, output ignores practical limits, the process has become more complex than the problem. Recover: go back to a plain, well-specified prompt; verify key claims independently; get domain input; test small before rollout. Some problems are not prompt-shaped. (Mastering Claude AI Ch.10)

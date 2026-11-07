@@ -16,7 +16,7 @@ Workflow: read source → extract into `sources/` → distill into `techniques/`
 ## Structure
 - `guidelines/`: rules for writing standing instructions (user, area, agent level); templates must follow them
 - `sources/`: condensed extractions from books/courses/articles/vendor docs, one file per source, with chapter/section or URL references so claims are traceable back to origin
-- `techniques/`: technique-level notes (one concept per file), split into foundational vs. advanced
+- `techniques/`: synthesised technique notes across sources: `foundational`, `advanced`, `model-choice-and-effort`, and `retired` for techniques that no longer pay off
 - `templates/`: standing-instruction templates (user system prompt, area instructions, agent contract, task workflow) at the top level; one-off prompt templates in `templates/one-off/`
 
 When guidance changes, update `guidelines/system-prompt-guidelines.md` first, then the templates that implement it. This repo is public: keep personal, employer and client details out; filled-in prompts live in the private vault (`JB/Prompt-Library/`).
@@ -25,6 +25,7 @@ When guidance changes, update `guidelines/system-prompt-guidelines.md` first, th
 - Keep notes terse and scannable (bullets, tables): match the existing vault's style, not the source book's prose.
 - Every technique/template note should cite its source (book + chapter) so provenance isn't lost.
 - When multiple sources cover the same technique, merge into one note and list all sources rather than duplicating.
+- Source notes carry `source_type`, `currency` (current, partly-dated, dated) and `reviewed` frontmatter. When a new source or model release contradicts a technique, move it to `techniques/retired.md` with the reason and the replacement, and update the source's currency line.
 
 ## Sources logged so far
 - *Mastering Claude AI* (Ryan Dickey, Apress): epub in `~/Downloads/01_Learning & Development/`. Extracted: Ch.4 "The Art of Prompting", Ch.10 "Advanced Prompting Strategies", Appendix A (Quick Reference), Appendix C (Templates & Frameworks). See `sources/mastering-claude-ai.md`.
@@ -32,3 +33,5 @@ When guidance changes, update `guidelines/system-prompt-guidelines.md` first, th
 - Claude Code Agent Tutorial, "How to Build an AI Agent with Claude Code" (second pass): downloaded note `~/Downloads/agent-autocorrect-workflow-guidelines.md` (2026-09-25), condensed into its own source note. Covers agent discernment (stop and ask, plan first, adjust mid-run) and the four-pillar Workflow File. See `sources/agent-autocorrect-and-workflow-files.md` and `templates/task-workflow.md`.
 - Vendor guidance scan (Anthropic, OpenAI, Google, AGENTS.md, Cursor, 12-Factor Agents), research sub-agent run 2026-09-25, URLs accessed that day. See `sources/vendor-guidance-2026.md`. Re-run when major models change.
 - Google, *Prompt Engineering* whitepaper (Lee Boonstra, v4, September 2024), PDF in the private vault at `JB/Learning/PromptEngineering/`. See `sources/google-prompt-engineering-whitepaper.md`.
+- *Prompt Optimization Guide* (working guide, author not recorded), captured in the vault inbox 2026-11-07. Model claims checked against Anthropic docs that day. See `sources/prompt-optimization-guide.md`.
+- Anthropic Claude 5 model, effort and thinking guidance (docs accessed 2026-11-07), added to `sources/vendor-guidance-2026.md`. Drove `techniques/retired.md` and `techniques/model-choice-and-effort.md`.

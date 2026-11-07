@@ -1,5 +1,8 @@
 ---
 title: "Source: Vendor Guidance on System Prompts and Agents (2026 scan)"
+source_type: vendor-docs
+currency: current
+reviewed: 2026-11-07
 ---
 
 Condensed from a sourced desk-research pass run 2026-09-25 across official Anthropic, OpenAI and Google documentation, the AGENTS.md open format, Cursor rules, and one practitioner source. All URLs accessed 2026-09-25. Type tags: **[doc]** official product doc, **[blog]** official engineering blog, **[prac]** practitioner (secondary).
@@ -19,6 +22,17 @@ Condensed from a sourced desk-research pass run 2026-09-25 across official Anthr
 - Overengineering: models may add files, abstractions or flexibility not asked for. Scope them to what was requested or clearly necessary.
 - Autonomy line drawn by **reversibility and blast radius**: act on local, reversible work; ask before destructive, hard-to-reverse, or shared/visible actions.
 - Subagent overuse is a real failure mode. Delegate only genuinely parallel, isolated or independent work.
+
+**Claude 5 family: model choice, effort and thinking** [doc, accessed 2026-11-07] `platform.claude.com/docs/en/about-claude/models/choosing-a-model`, `.../prompt-engineering/prompting-claude-opus-5-5`, `.../claude-prompting-best-practices`
+- "Most workloads start with Claude Opus 5.5." Move to Fable 5.1 if evals at `xhigh` or `max` still fall short on demanding reasoning or long-horizon agentic work. Haiku 5.5 for lowest latency and price, including sub-agent tasks.
+- Effort is the main control for thinking. Defaults: `medium` on Opus 5.5 and Haiku 5.5; `high` on Fable 5.1, Opus 5 and Sonnet 5.5. Level names do not map to the same thinking across models; re-test rather than carrying a setting over. Lowering effort cuts thinking more reliably than prompt wording.
+- Thinking is always on for Fable 5.1, Mythos 5.1, Fable 5 and Opus 5.5; on by default for Opus 5, Sonnet 5.5, Sonnet 5 and Haiku 5.5.
+- Remove instructions that ask the model to write its reasoning in the response: on Fable 5.1, Opus 5.5 and Sonnet 5.5 they may be declined with the `reasoning_extraction` refusal category. Manual chain of thought is a fallback only when thinking is off.
+- "Think carefully before answering" lines in chat system prompts: removing them on Opus 5.5 made replies start sooner with no clear quality loss.
+- Prefer general instructions ("think thoroughly") over hand-written reasoning steps. Worked examples (problem, method, answer) still shape thinking.
+- Prefilled assistant responses return a 400 error from Claude 4.6 on. `budget_tokens` is deprecated and a 400 error from Claude 4.7 on; use effort.
+- Opus 5 writes longer user-facing answers and effort does not reliably shorten them: prompt for length. Fable 5.1 writes fewer progress updates in agentic work: ask for them.
+- Unattended runs: treat a text-only end of turn as a report, not completion; keep a checklist; name the early stops you do not want; stop after two or three automatic continuations.
 
 **Effective context engineering for AI agents** [blog, 2025-09-29] `anthropic.com/engineering/effective-context-engineering-for-ai-agents`
 - "Find the smallest set of high-signal tokens that maximize the likelihood of your desired outcome."

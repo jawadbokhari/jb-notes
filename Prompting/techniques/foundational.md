@@ -1,58 +1,84 @@
 ---
 title: Foundational Prompting Techniques
+reviewed: 2026-11-07
 ---
 
-Source: [[../sources/mastering-claude-ai|Mastering Claude AI]], Ch.4.
+What every prompt needs, for current reasoning models (Claude 5 family, GPT-5, Gemini 3). Synthesised from [[../sources/vendor-guidance-2026|Vendor Guidance 2026]] (Anthropic prompting best practices, re-checked 2026-11-07), [[../sources/prompt-optimization-guide|Prompt Optimization Guide]], [[../sources/google-prompt-engineering-whitepaper|Google whitepaper]] and [[../sources/mastering-claude-ai|Mastering Claude AI]] Ch.4. Techniques that no longer pay off are in [[retired|Retired Techniques]].
 
-## Anatomy of a good prompt
-Four ingredients — missing any one degrades the response:
+**Core idea:** most rework comes from the prompt, not the model. Missing context, unstated intent or unclear success criteria force the model to guess. Fix the prompt before changing model or effort.
 
-| Ingredient | Question it answers | Example |
+**Key test:** show the prompt to a capable colleague with no context. If they would be confused, the model will be too. (Anthropic)
+
+## 1. Anatomy of a good prompt
+
+| Part | Question it answers | Example |
 |---|---|---|
-| Context | What's the situation? | "I'm emailing a client after our first meeting" |
-| Specificity | What exactly do I want? | "5-slide outline, 10-min talk, HS students" |
-| Format | How should it look? | "as a table with 3 columns" |
-| Constraints | What are the boundaries? | length / tone / audience / scope |
+| Context | What is the situation? | "Follow-up email to a client after our first meeting" |
+| Intent | What is it for, who reads it, what does a bad answer look like? | "CFO reads it on a phone; a bad answer buries the price" |
+| Task | What exactly do I want? | "Three-paragraph email proposing a pilot" |
+| Format | How should it look? | "Plain text, no headings, under 150 words" |
+| Constraints | What are the limits? | tone, scope, what must not change |
+| Done when | How will I judge it? | "Price and start date in the first two lines" |
 
-Rule of thumb: vague in → vague out. Specificity beats vagueness, but don't stack so many constraints they conflict (see pitfalls below).
+Intent is the part most often missing, and the part you most often discover later. (Prompt Optimization Guide)
 
-## Few-shot learning
-Show, don't just describe:
-- **Zero-shot** — no examples, just the instruction
-- **One-shot** — one example to imitate
-- **Few-shot** — multiple examples; Claude infers style/tone/structure as a pattern, not a template to copy verbatim
+## 2. Give the reason with the instruction
 
-Use when: tone/format is hard to describe in words but easy to demonstrate (brand voice, a specific writing style, code style).
+"No ellipses, because a text-to-speech engine reads the output" beats "NEVER use ellipses". The model generalises from the reason to cases you did not list. (Anthropic)
 
-## Role-playing
-"You're a [role] with [trait]. [Task], for [audience]." Bundles expertise level + tone + approach into one instruction. Cheap and effective — usually the first thing worth trying when a plain instruction reads generically.
+## 3. Say what to do, not what to avoid
 
-## Chain of thought (basic)
-Ask for step-by-step reasoning before the conclusion. Best for problems with verifiable intermediate steps (multi-factor decisions, debugging, analysis). Caveat: Claude emulates plausible-sounding reasoning patterns from training data — it is not doing formal logic. Treat the reasoning as a structuring device, verify conclusions independently, especially outside domains with strong training-data conventions.
+"Write flowing prose paragraphs" beats "don't use markdown". Keep prohibitions for safety and hard limits. (Anthropic, Google p.56-57)
 
-## Iteration
-Nobody nails it in one shot. Cycle: **attempt → analyze what's working/missing → refine → repeat.** Starting simple and iterating beats trying to perfect the first prompt (see "Perfectionist Paralysis" below).
+## 4. Be literal about scope
 
-## Meta-prompting (basic)
-Ask Claude what it needs from you before doing the task: *"I want help with [goal]. What information/context would you need from me to do this well?"* Cheap way to discover missing context before wasting a round-trip.
+Current models follow wording precisely. "Suggest changes" gets suggestions, not edits. If you want more than the task strictly requires (extra polish, tests, alternatives), ask for it. If you want action, say "make the change". (Anthropic)
 
-## Five pitfalls to check for
-1. **Kitchen Sink** — one prompt asking for write+edit+format+optimize → split into steps
-2. **Mind Reader Fallacy** — assuming implied intent is obvious → state it
-3. **One-Size-Fits-All** — same template regardless of task type → code prompts ≠ poetry prompts
-4. **Perfectionist Paralysis** — polishing prompt #1 forever → ship a draft, iterate
-5. **Over-Constraining** — stacking specific criteria until they conflict → relevant specificity, not maximal
+## 5. Examples: few, varied, tagged
+
+- One to five examples, relevant to the real case, varied so the model does not copy an accidental pattern, with identical formatting.
+- Wrap them in `<example>` tags so they are not read as instructions.
+- Include an edge case (one to accept, one to refuse) when edge cases matter.
+- With thinking models, a worked example as problem, method, answer shapes how the model reasons about similar problems. (Anthropic)
+
+## 6. Structure
+
+- Separate instructions, context, examples and input with XML tags or headings, one scheme throughout.
+- Long documents first, question and instructions last (Anthropic reports up to 30% better on multi-document tasks). For long inputs, ask for relevant quotes before the answer.
+- Prompt style leaks into output style: a prompt with less markdown gets less markdown back.
+
+## 7. Role: one functional line
+
+"You are a contract lawyer reviewing a SaaS order form for a buyer" focuses tone and expertise. A long persona adds nothing; expertise shows in the instructions. (Anthropic, Google p.21-23)
+
+## 8. Ask first on triggers
+
+For ambiguous or high-stakes work, tell the model not to start yet: it lists what is missing and asks. Otherwise let it state an assumption in one line and proceed. Asking costs a turn; guessing wrong costs a rework round. (Prompt Optimization Guide, Mastering Claude AI Ch.4)
+
+## 9. Length and verbosity
+
+State the length you want. Default length differs by model (Opus 5 writes longer user-facing answers; effort does not reliably shorten them), so a length line beats relying on defaults. (Anthropic)
+
+## 10. Iterate, one thing at a time
+
+Attempt, look at what is missing, refine. Ship a rough first prompt and improve it rather than polishing it blind.
+
+## Five pitfalls (Mastering Claude AI Ch.4)
+
+1. **Kitchen sink:** write, edit, format and optimise in one ask. Split into steps.
+2. **Mind reader:** assuming intent is obvious. State it.
+3. **One size fits all:** the same template for code and for prose. Adapt.
+4. **Perfectionist paralysis:** polishing prompt one forever. Draft and iterate.
+5. **Over-constraining:** stacked criteria that conflict. Keep the relevant ones.
 
 ## Pre-send checklist
-- [ ] Enough context?
-- [ ] Specific and clear?
-- [ ] Format specified?
-- [ ] Constraints reasonable and compatible with each other?
-- [ ] Would an example clarify this faster than more description?
-- [ ] Asking for one thing at a time?
-- [ ] Backup approach ready if this doesn't land?
 
-## Skill progression (self-check)
-Novice → "Help me write." Intermediate → topic + length. Advanced → topic + audience + tone + structure + exclusions, in one prompt. Master → same result reached conversationally, adapting technique to what the response reveals.
+- [ ] Context and intent stated (what for, who reads it)
+- [ ] Task specific; "done when" clear
+- [ ] Format and length stated
+- [ ] Reasons given for non-obvious rules; no capitals for emphasis
+- [ ] Would one example say it faster than more description?
+- [ ] Long material above the question
+- [ ] One thing at a time
 
-See also: [[advanced|Advanced Prompting Techniques]]
+See also: [[advanced|Advanced Techniques]], [[model-choice-and-effort|Model Choice and Effort]], [[retired|Retired Techniques]].

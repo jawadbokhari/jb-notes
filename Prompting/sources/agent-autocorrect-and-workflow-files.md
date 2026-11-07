@@ -1,6 +1,11 @@
 ---
 title: "Source: Agent Auto-Correction & Workflow Files (Claude Code Agent Tutorial)"
+source_type: article
+currency: partly-dated
+reviewed: 2026-11-07
 ---
+
+Currency (reviewed 2026-11-07): the four-pillar Workflow File holds; "ask at least three clarifying questions" is retired in favour of trigger-based asking, see [[../techniques/retired|Retired Techniques]].
 
 Condensed extraction from the tutorial *"How to Build an AI Agent with Claude Code"*, the same source already logged in [[ai-agent-system-instructions|AI Agent System Instructions]]. That note covers how to write the instruction file; this one covers two follow-on topics: how an agent corrects course under uncertainty, and how to structure a reusable Workflow File (Agent SOP).
 
