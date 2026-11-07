@@ -35,7 +35,7 @@ Each source note carries `source_type`, `currency` (current, partly-dated, dated
 - [[sources/vendor-guidance-2026|Vendor Guidance on System Prompts and Agents]]: Anthropic (incl. Claude 5 model, effort and thinking guidance, checked 2026-11-07), OpenAI, Google, AGENTS.md, Cursor; re-check when models change
 
 **Practitioner guides and articles**
-- [[sources/prompt-optimization-guide|Prompt Optimization Guide]] (current): fix the prompt first, nine optimisation techniques, model escalation, prompt and skill libraries
+- [[sources/prompt-optimization-guide|Prompt Optimization Guide]] (current): fix the prompt first, nine optimisation techniques, model escalation
 - [[sources/ai-agent-system-instructions|AI Agent System Instructions (Dust Blog + Claude Code Tutorial)]] (partly dated): three-layer model, six-part anatomy, three-tier guardrails
 - [[sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files (Claude Code Tutorial)]] (partly dated): plan-first, four-pillar Workflow File
 
@@ -43,6 +43,9 @@ Each source note carries `source_type`, `currency` (current, partly-dated, dated
 - [[sources/google-prompt-engineering-whitepaper|Prompt Engineering Whitepaper (Google, Lee Boonstra, 2024)]] (partly dated): best practices still hold; reasoning and sampling sections retired
 - [[sources/mastering-claude-ai|Mastering Claude AI (Ryan Dickey, 2025)]] (partly dated): prompt anatomy, pitfalls, advanced strategies, one-off templates
 - [[sources/anthropic-prompt-engineering-interactive-tutorial|Anthropic Prompt Engineering Interactive Tutorial]] (dated): first course, Claude 3 era
+
+## Resources
+- [[prompt-and-skill-libraries|Prompt and Skill Libraries]]: official and community prompt and skill collections, with vetted status
 
 ## Workspace
 - [[currency-review-2026-11-07|Currency review against Claude 5 family docs (2026-11-07)]]

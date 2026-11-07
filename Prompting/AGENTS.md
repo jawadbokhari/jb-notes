@@ -17,6 +17,7 @@ Workflow: read source → extract into `sources/` → distill into `techniques/`
 - `guidelines/`: rules for writing standing instructions (user, area, agent level); templates must follow them
 - `sources/`: condensed extractions from books/courses/articles/vendor docs, one file per source, with chapter/section or URL references so claims are traceable back to origin
 - `techniques/`: synthesised technique notes across sources: `foundational`, `advanced`, `model-choice-and-effort`, and `retired` for techniques that no longer pay off
+- `prompt-and-skill-libraries.md`: public prompt and skill collections; add new library links here, not in source notes
 - `templates/`: standing-instruction templates (user system prompt, area instructions, agent contract, task workflow) at the top level; one-off prompt templates in `templates/one-off/`
 
 When guidance changes, update `guidelines/system-prompt-guidelines.md` first, then the templates that implement it. This repo is public: keep personal, employer and client details out; filled-in prompts live in the private vault (`JB/Prompt-Library/`).
