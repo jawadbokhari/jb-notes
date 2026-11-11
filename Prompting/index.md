@@ -25,7 +25,7 @@ Working notes for learning and practicing prompt engineering (model-agnostic, wi
 ## Techniques
 - [[techniques/foundational|Foundational Prompting Techniques]]: anatomy (context, intent, task, format, constraints, done when), reasons with rules, literal scope, examples, structure, one-line role, ask on triggers, pitfalls, pre-send checklist
 - [[techniques/advanced|Advanced Prompting Techniques]]: draft-critique-revise, adversarial review, multi-perspective, rubrics, step-back, meta-prompting, evals, constraint engineering, long agent runs, which technique when
-- [[techniques/model-choice-and-effort|Model Choice and Effort]]: Claude model line-up, effort defaults, when to escalate to Fable
+- [[techniques/model-choice-and-effort|Model Choice and Effort]]: which model and effort to give a task, escalation order, subagent model rules
 - [[techniques/retired|Retired and Downgraded Techniques]]: what no longer pays off on reasoning models (written chain of thought, prefill, recursive CoT, quotas) and what replaces it
 
 ## Sources
@@ -35,6 +35,7 @@ Each source note carries `source_type`, `currency` (current, partly-dated, dated
 - [[sources/vendor-guidance-2026|Vendor Guidance on System Prompts and Agents]]: Anthropic (incl. Claude 5 model, effort and thinking guidance, checked 2026-11-07), OpenAI, Google, AGENTS.md, Cursor; re-check when models change
 
 **Practitioner guides and articles**
+- [[sources/anthropic-which-claude-model|Which Claude Model Should You Build With? (Anthropic, 2026-11)]] (current): task-to-model table, prices, effort curve, mixing models, migration checks
 - [[sources/prompt-optimization-guide|Prompt Optimization Guide]] (current): fix the prompt first, nine optimisation techniques, model escalation
 - [[sources/ai-agent-system-instructions|AI Agent System Instructions (Dust Blog + Claude Code Tutorial)]] (partly dated): three-layer model, six-part anatomy, three-tier guardrails
 - [[sources/agent-autocorrect-and-workflow-files|Agent Auto-Correction & Workflow Files (Claude Code Tutorial)]] (partly dated): plan-first, four-pillar Workflow File
