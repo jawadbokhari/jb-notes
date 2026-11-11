@@ -9,7 +9,7 @@ Techniques from older sources that no longer pay off on current reasoning models
 
 | Technique | Found in | Why it no longer pays off | Use instead |
 |---|---|---|---|
-| "Let's think step by step" / manual chain of thought in the answer | Google p.29-31, Mastering Claude AI Ch.4 | Thinking is built in (always on for Fable 5.1 and Opus 5.5). Asking for written reasoning duplicates it and may be declined as reasoning extraction on Fable 5.1, Opus 5.5 and Sonnet 5.5 | Raise effort; ask for checkable artefacts (weakness list, rubric result) |
+| "Let's think step by step" / manual chain of thought in the answer | Google p.29-31, Mastering Claude AI Ch.4 | Thinking is built in (always on for Fable 5.2 and Opus 5.5). Asking for written reasoning duplicates it and may be declined as reasoning extraction on Fable 5.2, Opus 5.5 and Sonnet 5.5 | Raise effort; ask for checkable artefacts (weakness list, rubric result) |
 | "Think carefully before answering" in a chat system prompt | Common practice | On Opus 5.5 removing it made replies start sooner with no clear quality loss | Leave thinking to the model; use effort |
 | Recursive chain of thought (five written levels), self-questioning cascade | Mastering Claude AI Ch.10 | Prescribes the thinking; "think thoroughly" often beats a hand-written reasoning plan, and errors compound across levels | Draft, critique, revise |
 | Tree of thoughts as a prompt pattern | Google p.36 | Native thinking explores alternatives internally | For real breadth, run separate attempts or sub-agents and compare |

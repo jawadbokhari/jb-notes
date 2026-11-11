@@ -35,6 +35,7 @@ In a multi-agent setup: keep code edits and judgment calls on the main model and
 - Effort is the main control for how much the model thinks. Thinking is always on for Fable 5.2 and Opus 5.5; effort, not prompt wording, sets how much.
 - Defaults: `medium` on Opus 5.5 and Haiku 5.5. Sonnet 5.5 and Fable 5.2 default to `high` on the API and `medium` in Claude Code (`/effort status` shows yours).
 - Level names do not mean the same across models: do not carry a setting over from an older model.
+- Fable 5.2 at `high` and above thinks before almost every reply, and "answer directly" in the prompt does not stop it at `medium` and above. Lower the effort instead (Anthropic prompting best practices, accessed 2026-11-11).
 - Cost curve on Opus 5.5 (SWE-bench Pro, relative to `high`): `medium` about 2.5 points lower at 70% of the cost, `low` about 8 points lower at a third, `xhigh` about 1.4 points higher at 2.5 times the cost.
 - Past `high`, one more level can cost as much as the next model up. Test the bigger model at a lower effort instead.
 - Effort cannot add knowledge or skill the model lacks; only a bigger model does.

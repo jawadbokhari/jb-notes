@@ -5,7 +5,7 @@ reviewed: 2026-11-07
 
 Techniques for work where a wrong answer is costly: plans, designs, analyses, long agent runs. Synthesised from [[../sources/prompt-optimization-guide|Prompt Optimization Guide]], [[../sources/vendor-guidance-2026|Vendor Guidance 2026]], [[../sources/google-prompt-engineering-whitepaper|Google whitepaper]] and [[../sources/mastering-claude-ai|Mastering Claude AI]] Ch.10. Basics are in [[foundational|Foundational Techniques]].
 
-**Ask for artefacts, not reasoning.** Current models think internally (always on for Fable 5.1 and Opus 5.5). Every technique below asks for something you can read and check: a weakness list, a revised draft, a rubric result. Do not ask the model to write out its reasoning in the answer; that duplicates its thinking, and Fable 5.1, Opus 5.5 and Sonnet 5.5 may decline it as reasoning extraction (Anthropic, checked 2026-11-07). See [[retired|Retired Techniques]].
+**Ask for artefacts, not reasoning.** Current models think internally (always on for Fable 5.2 and Opus 5.5). Every technique below asks for something you can read and check: a weakness list, a revised draft, a rubric result. Do not ask the model to write out its reasoning in the answer; that duplicates its thinking, and Fable 5.2, Opus 5.5 and Sonnet 5.5 may decline it as reasoning extraction (Anthropic, checked 2026-11-11). See [[retired|Retired Techniques]].
 
 ## Review techniques
 
