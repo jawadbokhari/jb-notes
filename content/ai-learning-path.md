@@ -1,7 +1,7 @@
 ---
 title: How should one start with AI learning
 created: 2026-05-06
-updated: 2026-10-05
+updated: 2026-11-11
 tags:
   - ai
   - learning
@@ -61,11 +61,11 @@ Take these in order, after the first six Anthropic courses, because they assume 
 |     | Course | Summary | My Takeaways |
 | --- | ------ | ------- | ------------ |
 | ✅ | [Agent Skills with Anthropic](https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic/) | A hands-on course on building skills. | A second pass on the Anthropic skills course. See [[ai-fundamentals/what-is-a-skill\|What is a skill]]. |
-| ⬜ | [Spec-Driven Development with Coding Agents](https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents) (with JetBrains) | Write a spec first, then plan, implement and verify with an agent. | Not started. The first course for anyone who writes code with an agent. |
+| ✅ | [Spec-Driven Development with Coding Agents](https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents) (with JetBrains) | Write a spec first, then plan, implement and verify with an agent. | Agree on the work in writing before it starts, and decide in advance how you will know it is done. My article: [[spec-driven-communication\|Spec-Driven Communication]]. The first course for anyone who writes code with an agent. |
 | ⬜ | [AI Code Review](https://www.deeplearning.ai/short-courses/ai-code-review/) | Reviewing agent-written code. | Not taken yet. Useful for anyone who reviews or approves agent-written code. |
 | ⬜ | [Evaluating AI Agents](https://www.deeplearning.ai/short-courses/evaluating-ai-agents/) | How to test something that gives a different answer each time. | Not taken yet. Take it if you test or judge AI output. |
 | ⬜ | [LLM Evaluation Course (Practice)](https://www.evidentlyai.com/llm-evaluation-course-practice) (Evidently AI, not DeepLearning.AI) | Hands-on evaluation of LLM output. | Not taken yet. Pairs with Evaluating AI Agents, so take it right after. |
-| ⬜ | [Agentic AI](https://www.deeplearning.ai/courses/agentic-ai/) (about 10 hours) | The conceptual backbone of agentic systems. | Not taken yet. The longest course, so it comes late. |
+| 🚧 | [Agentic AI](https://www.deeplearning.ai/courses/agentic-ai/) (about 10 hours) | The conceptual backbone of agentic systems. | In progress. The longest course, so it comes late. |
 | ⬜ | [Practical Multi AI Agents and Advanced Use Cases with crewAI](https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/) | Multi-agent orchestration outside Anthropic's tooling. | Not taken yet. A second point of view. |
 
 ## Suggested path by role
