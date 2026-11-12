@@ -19,7 +19,7 @@ Working notes for learning and practicing prompt engineering (model-agnostic, wi
 - [[templates/one-off/writing|Writing]]: blog post blueprint, email enhancement
 - [[templates/one-off/learning|Learning]]: concept mastery, study guide
 - [[templates/one-off/creative|Creative]]: story development, brainstorming
-- [[templates/one-off/research|Research]]: CRAAP source analysis, research synthesis matrix
+- [[templates/one-off/research|Research]]: CRAAP source analysis, research synthesis matrix, persona behaviour and scenario extraction
 - [[templates/one-off/data-and-productivity|Data & Productivity]]: quick data story, morning briefing, weekly review
 - [[templates/one-off/meta-prompting|Meta-prompting]]: ask what's missing, draft, improve, conflict check, diagnose a failure, test cases, conversation to prompt, port to another model
 
