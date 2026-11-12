@@ -21,6 +21,7 @@ Working notes for learning and practicing prompt engineering (model-agnostic, wi
 - [[templates/one-off/creative|Creative]]: story development, brainstorming
 - [[templates/one-off/research|Research]]: CRAAP source analysis, research synthesis matrix
 - [[templates/one-off/data-and-productivity|Data & Productivity]]: quick data story, morning briefing, weekly review
+- [[templates/one-off/meta-prompting|Meta-prompting]]: ask what's missing, draft, improve, conflict check, diagnose a failure, test cases, conversation to prompt, port to another model
 
 ## Techniques
 - [[techniques/foundational|Foundational Prompting Techniques]]: anatomy (context, intent, task, format, constraints, done when), reasons with rules, literal scope, examples, structure, one-line role, ask on triggers, pitfalls, pre-send checklist

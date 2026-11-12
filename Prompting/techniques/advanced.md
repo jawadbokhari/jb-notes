@@ -30,6 +30,7 @@ First ask a general question ("what makes a migration plan safe?"), then feed th
 - **Before the task:** "What would you need from me to do this well?" Finds missing context for the cost of one turn.
 - **On the prompt:** ask the model to rewrite your prompt, critique its rewrite, and give a final version under a length cap (rewrites bloat).
 - **Conflict check:** ask it to list contradictory or redundant instructions, then make surgical edits. Typical conflicts: brevity vs. completeness, autonomy vs. asking first. (OpenAI GPT-5.1 guide)
+- Copy-paste prompts for these and five more use cases: [[../templates/one-off/meta-prompting|Meta-prompting templates]].
 
 ### 7. Evaluate, do not eyeball
 For prompts you reuse: a small test set of real inputs, explicit criteria scored per run, a log of each version and result. Re-run it when the model changes. A model or LLM judge can score runs; you still decide what counts as good. (Google p.62-63, Mastering Claude AI Ch.10)
