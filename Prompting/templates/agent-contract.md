@@ -20,7 +20,8 @@ System instructions for a new agent or sub-agent: its job, inputs, tools, limits
 name: [lowercase-hyphenated-name]
 description: [What it does, in the third person, and when to use it, with trigger words. E.g. "Reviews Jira backlogs for duplicates and stale issues and proposes clean-up actions. Use when asked to groom, tidy or de-duplicate a backlog, epic or JQL result."]
 tools: [allowlist, e.g. Read, Grep, Bash]
-model: [optional, e.g. sonnet]
+model: [pin it: smallest tier where a wrong result is cheap to spot, e.g. haiku for search, sonnet for scoped repeated work; see Model Choice and Effort]
+effort: [e.g. low for mechanical checks, medium by default]
 ---
 
 <!-- One sentence of role, one of mission. Expertise shows in the rules below, not in adjectives. -->

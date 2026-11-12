@@ -55,6 +55,8 @@ User (me, everywhere)
 12. **No contradictions.** Conflicting rules get resolved arbitrarily. Periodically ask a model to list conflicting or redundant lines in your file, then fix them surgically. Typical conflicts: brevity vs. completeness, autonomy vs. asking first.
 13. **Keep it timeless.** No point-in-time state (current members, open tickets, today's config) in standing instructions. Point to where the live data is.
 14. **Version and re-test.** Keep a short change log outside the file, and re-read the file when you switch models. Advice written to push an older model can overshoot on a newer one.
+15. **Keep model names out of prose rules.** Line-ups change within months. Put model and effort in agent frontmatter or tool settings; in prose, state the routing test instead ("delegate work where a mistake is cheap to spot"). Write every instruction so the strictest model in use can follow it, so a step can move tiers without a rewrite.
+16. **Control thinking with effort, not wording.** "Answer directly" or "think carefully" does not change how much current Claude models think; effort does. Leave such lines out and set effort where the agent or session is configured.
 
 ## 5. Contract principles (agents and area files)
 
@@ -78,6 +80,7 @@ The core lesson from my instruction-drift case study: **instruction text does no
 - **Leaves out:** project facts, current goals that change each quarter, long biographies, tool-specific mechanics. Those belong in area files or memory.
 - **About me, not a persona for the AI.** Describe the user and the working relationship. Keep any role for the assistant to one functional line.
 - **Portable core.** Write it once in plain Markdown so the same text works in Claude, ChatGPT and Gemini. Add tool-specific notes as a clearly separate tail section. Keep tool rules in the core at goal level ("GitLab: `glab` CLI only"); put mechanics (server names, script paths, failure workarounds, commands) in the tool's own file.
+- **Delegation rule.** State which work may go to cheaper sub-agents by a test, not a model name: work with a written spec where a wrong result is cheap to spot (search, log reading, link checks, test runs) goes down; code edits and judgment calls stay with the main model, because a misread result sends it down the wrong path. Model names, if any, go in the tool-specific tail.
 
 ### 6.2 Area level (`AGENTS.md` / `CLAUDE.md`)
 
@@ -100,7 +103,8 @@ The core lesson from my instruction-drift case study: **instruction text does no
 - **Output contract:** return format, length budget, and the fixed report shape. A sub-agent returns a condensed summary, not a transcript.
 - **Definition of done:** the checks it runs before reporting completion.
 - **Self-sufficient:** no reliance on the parent's conversation. Pass in, or tell it how to fetch, everything it needs.
-- **Prefer fewer, focused agents.** Start with one agent and tools; split only when work is genuinely parallel or needs isolated context.
+- **Model and effort.** Pin both in the definition, chosen by [[../techniques/model-choice-and-effort|Model Choice and Effort]]: the smallest tier where a wrong result is cheap to spot (searches, mechanical checks: smallest model, low effort); a mid tier for well-scoped, repeated work; the main tier for judgment or edits. Give the agent a way to verify its own output before raising effort or tier. An unpinned agent may run on the session model (Claude Code's built-in Explore does), which silently costs top-tier rates.
+- **Prefer fewer, focused agents.** Start with one agent and tools; split only when work is genuinely parallel or needs isolated context. A lead with cheaper workers pays off only for work larger than one context, not for a chain of dependent steps.
 
 ## 7. Outdated advice and what replaces it
 
@@ -118,6 +122,9 @@ The core lesson from my instruction-drift case study: **instruction text does no
 | "Write out your reasoning" / "think carefully before answering" | Thinking is always on in Fable 5.2 and Opus 5.5; written-reasoning requests may be declined, and thinking lines slow chat replies | Set effort; ask for outputs you can check (weaknesses, rubric result) |
 | Carrying an effort or thinking setting over to a new model | Effort names map to different amounts of thinking per model | Start at the new model's default and re-test |
 | "Always ask at most N questions" | A quota again, in the other direction | Ask on triggers |
+| "Answer directly, don't overthink" to speed up replies | Ignored at `medium` effort and above on Fable 5.2 | Lower the effort |
+| "Use the cheapest model for everything delegated" | Cheap models misread judgment work, and the main model builds on the error | Delegate by the cheap-to-spot test; keep edits and judgment on the main model |
+| Naming models in prose rules ("use Sonnet for X") | Stale when the line-up changes; hard to find and update | Routing test in prose, model in agent frontmatter or settings |
 
 ## 8. Review checklists
 
@@ -138,6 +145,7 @@ Use before publishing or changing a file. Tick manually.
 - [ ] Autonomy line stated (act vs. ask first)
 - [ ] Domain boundaries stated, marked as not overridable
 - [ ] Tool-specific notes kept in a separate section
+- [ ] Delegation rule stated as a test (cheap to spot); model names only in the tool tail
 
 **Area level**
 - [ ] `AGENTS.md` is canonical; any `CLAUDE.md` holds only Claude-only content
@@ -149,6 +157,7 @@ Use before publishing or changing a file. Tick manually.
 - [ ] Description says what and when, in the third person
 - [ ] Inputs, scope, out-of-scope stated
 - [ ] Tools are an allowlist with when-to-use notes
+- [ ] Model and effort pinned, matched to how cheaply a wrong result is spotted
 - [ ] Stop and escalate conditions cover missing input, tool failure, conflict, out of scope
 - [ ] Output contract and definition of done are checkable
 - [ ] Works without the parent conversation
